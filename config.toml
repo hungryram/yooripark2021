@@ -1,3 +1,2 @@
-baseURL = "http://example.org/"
+baseURL = "https://national-beverage-company.netlify.app/"
 languageCode = "en-us"
-title = "My New Hugo Site"

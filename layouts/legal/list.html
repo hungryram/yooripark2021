@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="uk-section uk-section-small">
+    <div class="uk-container">
+        <div>
+        <div class="uk-width-1-2@s uk-width-2-5@m">
+            <ul class="uk-nav uk-nav-default">
+                {{ range .Pages }}
+                <li><a href="{{ .Permalink }}" class="uk-text-large">{{ .Title }}</a></li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>
+{{ end }}

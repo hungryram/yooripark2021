@@ -1,0 +1,101 @@
+/* TYPOGRAPHY */
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    color: #777;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+a.uk-accordion-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+form label {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+a.uk-button-secondary {
+    background: white;
+    color: #222;
+}
+
+.uk-text-medium {
+    font-weight: 500;
+}
+
+.accent {
+    color: #ba001a;
+}
+
+.uk-white {
+    color: #fff;
+}
+
+button.uk-button-primary,
+a.uk-button-primary {
+    background: #ba001a;
+}
+
+/* NAVBAR */
+
+div.top-navbar .uk-navbar-nav>li>a {
+    min-height: 40px;
+    text-transform: unset;
+}
+
+/* body svg {
+    color: #C3002F;
+} */
+
+ul.uk-navbar-nav>li>a:not(.top-navbar a) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+/* HERO */
+
+div.uk-overlay-hero {
+    background:rgb(34 34 34 / 5%);
+}
+
+footer.footer {
+    background: #181515;
+}
+
+footer.footer h6,
+footer.footer a {
+    color: #fff;
+}
+
+div.footer-credit p,
+div.footer-credit ul li a {
+    font-size: 12px;
+}
+
+.contact-detail span.uk-icon-button {
+    background: #ba001a;
+}
+
+.contact-detail svg {
+    color: #fff;
+}
+
+.contact-detail a {
+    color: #000;
+}

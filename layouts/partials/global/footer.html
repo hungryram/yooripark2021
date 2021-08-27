@@ -1,0 +1,53 @@
+{{ $social := .Site.Data.profile.social }}
+
+<footer class="footer">
+    <div class="uk-section">
+        <div class="uk-container">
+            <div class="uk-grid-large uk-child-width-1-3@s" uk-grid>
+                <div class="footer-text">
+                    <h6 class="uk-text-bold accent">National Beverage Company</h6>
+                    <p>We're a Southern California vending machine company providing free vending machine services to surrounding businesses in neighboring counties such as Los Angeles, Riverside, San Bernardino and Orange County. </p>
+                </div>
+
+                <div>
+                    <h6 class="uk-text-bold accent">Contact</h6>
+                    <ul class="uk-list">
+                        <li><a href="/custom-website-design">info@nationalbeveragecompany.com</a></li>
+                        <li><a href="/ecommerce-website-design">866-685-6789</a></li>
+                    </ul>           
+                </div>
+                <div>
+                    <div>
+                        <h6 class="uk-text-bold accent">Quick Links</h6>
+                        <ul class="uk-list">
+                            <li><a href="/contact">Contact</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                        </ul>                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-container uk-padding footer-credit">
+        <div class="uk-grid">
+            <div class="uk-width-1-2@s">
+                <p class="uk-light uk-text-small">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a></p>
+                <ul class="hr-legals uk-padding-remove">
+                    {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
+                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-right"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                  </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+<!-- <script src="/js/barbatransitions.js"></script> -->
+<script>
+
+</script>
+</body>
+</html>

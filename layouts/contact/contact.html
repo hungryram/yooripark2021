@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $footerContact := .Site.Data.profile.contact_information }}
+<div class="uk-section">
+    <div class="uk-container">
+        <div uk-grid>
+            <div class="uk-width-1-2@s">
+                <div class="uk-card uk-card-body">
+                    <h3>Contact National Beverage Now & Experience Truly Refreshing Service Today!</h3>
+                    <p>Free, Customizable Vending Service is as easy as <strong>1-2-3</strong></p>
+                    <ol>
+                        <li>Complete the form or call us (866) 685-6789</li>
+                        <li>A site analyst comes to your business to insure that we bring the proper vending equipment for your facility and to help you determine the best location for the vending machines within your facility.</li>
+                        <li>The vending equipment is delivered to your facility.</li>
+                    </ol>
+                    <ul class="uk-list contact-detail">
+                        <li><a href="tel:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>info@nationalbeveragecompany.com</a></li>
+                        <li><a href="tel:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="receiver"></span>(866) 685-6789</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="uk-width-1-2@s">
+                <div class="uk-card uk-card-body">
+                    <h3>Start your free vending service</h3>
+                    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
+                        <input name="bot-field" type="hidden" />
+                        <input type="hidden" name="Subject" value="Website Contact Form">
+                        <div class="uk-width-1-2@s">
+                            <label for="uk-input-name">Full Name*</label>
+                            <input class="uk-input" type="text" name="Name" id="uk-input-name" required>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label for="input-phone">Phone*</label>
+                            <input class="uk-input" type="text" name="Phone" id="input-phone" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="input-phone">Email*</label>
+                            <input class="uk-input" type="text" id="input-email" name="Email" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="input-company">Company*</label>
+                            <input class="uk-input" type="text" id="input-company" name="Company" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="input-address">Address*</label>
+                            <input class="uk-input" type="text" id="input-address" name="Address" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="input-city">City*</label>
+                            <input class="uk-input" type="text" id="input-city" name="City" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="cross-streets">Cross Streets*</label>
+                            <input class="uk-input" type="text" id="cross-streets" name="Cross Streets" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="employee-count">Number of onsite employees*</label>
+                            <input class="uk-input" type="text" id="employee-count" name="onsite employees" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label for="textarea-info">Additional Information*</label>
+                            <textarea class="uk-textarea" rows="5" id="textarea-info" name="Additional Info"></textarea>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <button class="uk-button uk-button-primary uk-width-1-1">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

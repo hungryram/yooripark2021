@@ -1,0 +1,14 @@
+{{ partial "global/head" . }}
+<div class="uk-position-top full-nav-wrapper" style="z-index: 1;">
+    {{ partial "global/navbar" . }}
+</div>
+<main data-barba="container" data-barba-namespace="{{ .Title | lower }}">
+{{ partial "home/hero" . }}
+{{ partial "home/intro" . }}
+{{ partial "home/features" . }}
+{{ partial "home/faq" . }}
+{{ partial "home/slide" . }}
+
+{{ partial "home/banner" . }}
+</main>
+{{ partial "global/footer" . }}

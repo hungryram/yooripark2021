@@ -1,0 +1,14 @@
+{{ partial "global/head" . }}
+{{ partial "global/navbar" . }}
+<div class="uk-section" style="background: #ba001a;">
+    <div class="uk-container">
+        <h2 class="uk-white">{{ .Title }}</h2>
+    </div>
+</div>
+<main data-barba="container" data-barba-namespace="{{ .Title | lower }}">
+{{ block "main" . }}
+
+{{ end }}
+</main>
+
+{{ partial "global/footer" . }}

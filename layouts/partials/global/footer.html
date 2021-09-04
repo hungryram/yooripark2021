@@ -37,7 +37,7 @@
                 <p class="uk-light uk-text-small">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a></p>
                 <ul class="hr-legals uk-padding-remove">
                     {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
-                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-right"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-right" onclick="navbaractive()"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                     {{ end }}
                   </ul>
             </div>
@@ -47,8 +47,6 @@
 <script src="https://unpkg.com/@barba/core"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 <!-- <script src="/js/barbatransitions.js"></script> -->
-<script>
 
-</script>
 </body>
 </html>

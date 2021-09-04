@@ -42,7 +42,7 @@
                         {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
                         <li>
-                            <a href="#" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}<span class="uk-margin-small-left" uk-icon="chevron-down"></span></a>
+                            <a href="#">{{ .Name }}<span class="uk-margin-small-left" uk-icon="chevron-down"></span></a>
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     {{ range .Children }}
@@ -52,7 +52,7 @@
                             </div>
                         </li>
                         {{ else }}
-                        <li><a href="{{ .URL | absURL }}" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}</a></li>
+                        <li><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
                         {{ end }}
                         {{ end }}
                         </ul>
@@ -65,7 +65,7 @@
 
 
 <!-- mobile -->
-<div uk-sticky="animation: uk-animation-slide-top-medium; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-dark; cls-inactive:uk-navbar-transparent; top: 400">
+<div uk-sticky="animation: uk-animation-slide-top-medium; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-dark; cls-inactive: top: 400">
     <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-padding-small uk-box-shadow-small">
         <div class="uk-navbar-left">
             <a href="{{ .Site.BaseURL }}">
@@ -73,7 +73,7 @@
             </a>
         </div>
         <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}"></a>
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle></a>
         </div>
     </nav>
     </div>

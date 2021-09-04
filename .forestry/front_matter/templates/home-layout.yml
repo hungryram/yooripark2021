@@ -39,3 +39,5 @@ fields:
       labelField: 
     label: Blocks
   label: Featured Section
+pages:
+- data/home.yml

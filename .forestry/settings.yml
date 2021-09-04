@@ -10,16 +10,6 @@ sections:
 - type: document
   path: data/appearance.yml
   label: Appearance
-- type: document
-  path: data/homelayout.yml
-  label: Home Layout
-- type: document
-  path: content/idx-admin/_index.md
-  label: IDX Admin
-  read_only: true
-- type: document
-  path: data/idx.yaml
-  label: IDX Set Up
 - type: directory
   path: content
   label: Pages
@@ -39,38 +29,6 @@ sections:
   - blog
 - type: heading
   label: Default Pages
-- type: directory
-  path: content/listings
-  label: Listings
-  create: documents
-  match: "**/*"
-  templates:
-  - property
-  - heading-and-body
-- type: directory
-  path: content/offices
-  label: Offices
-  create: documents
-  match: "**/*"
-  templates:
-  - heading-and-body
-  - offices
-- type: directory
-  path: content/our-team
-  label: My Team
-  create: documents
-  match: "**/*"
-  templates:
-  - our-team
-  - heading-and-body
-- type: directory
-  path: content/partners
-  label: Partners
-  create: documents
-  match: "**/*"
-  templates:
-  - partners
-  - heading-and-body
 - type: document
   path: content/testimonials/_index.md
   label: Testimonials

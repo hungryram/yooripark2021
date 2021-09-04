@@ -1,44 +1,59 @@
-{{ $social := .Site.Data.profile.social }}
-{{ $contact := .Site.Data.profile.primary_account }}
-<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200" style="background:white;">
-    
-<div class="top-navbar" style="background:#d31628">
-    <nav class="uk-container uk-container-medium" uk-navbar>
-        <div class="uk-navbar-left">
-            <ul class="uk-navbar-nav">
-                <li><a href="{{ $social.facebook }}" target="_blank"><span uk-icon="receiver" class="uk-margin-small-right"></span>(866) 685-6789</a></li>
-                <li><a href="{{ $social.instagram }}" target="_blank"><span uk-icon="mail" class="uk-margin-small-right"></span>info@nationalbeveragecompany.com</a></li>
-            </ul>
-        </div>
-        <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
-                {{ if $contact.primary_phone_number }}<li><a href="tel:{{ $contact.primary_phone_number }}">{{ $contact.primary_phone_number }}</a></li>{{ end }}
-                {{ if $contact.primary_email }}<li><a href="mailto:{{ $contact.primary_email }}">{{ $contact.primary_email }}</a></li>{{ end }}
-            </ul>
-        </div>
-    </nav>
-</div>
-    <nav class="main-nav uk-navbar-container uk-navbar-transparent">
-        <div class="uk-container uk-container-medium" style="padding-top:10px;padding-bottom:10px;">
+{{ $navbar := .Site.Data.appearance.branding }}
+{{ $navColor := .Site.Data.appearance.header }}
+{{ $navContact := .Site.Data.profile.contact_information }}
+{{ $headerSocial := .Site.Data.profile.social_media }}
+<style>
+    nav.uk-navbar-sticky ul li a,
+    .uk-navbar-sticky ul li a svg {
+        color: #000!important;
+    }
+</style>
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200" {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};"{{ end }}>
+    <div class="top-navbar" style="background:#aa0817">
+        <nav class="uk-container uk-container-{{ if .IsHome }}medium{{ else }}large{{ end }}" uk-navbar>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav top-bar">
+                    {{ if $navContact.cell }}<li><a style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}" href="tel:{{ $navContact.cell }}">{{ $navContact.cell }}</a></li>{{ end }}
+                    {{ if $navContact.email }}<li><a style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}" href="mailto:{{ $navContact.email }}">{{ $navContact.email }}</a></li>{{ end }}
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <nav class="main-nav uk-navbar-container uk-navbar-transparent"{{ if not .IsHome }} style="border-bottom: 1px solid rgb(213 213 213 / 20%);"{{ end }}>
+        <div class="uk-container uk-container-{{ if .IsHome }}medium{{ else }}large{{ end }}" style="padding-top:10px;padding-bottom:10px;">
             <div uk-navbar>
                 <div class="uk-navbar-left">
-                    <a href="{{ .Site.BaseURL }}" style="display: flex;align-items:center">
-                        <img src="https://res.cloudinary.com/hungryram19/image/upload/v1630634692/randy-nong/rn-insurance/rn-insurance-logo_k849q1.png" alt="" width="200" class="white-logo">
+                    <a href="{{ .Site.BaseURL }}">
+                        {{ if $navColor.transparent_background }}
+                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
+                        <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="dark-logo">
+                        {{ else }}
+                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
+                        {{ end }}
                     </a>
 
                 </div>
                 <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav uk-text-bold">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/products">Products</a></li>
-                        <li><a href="/clients">Clients</a></li>
-                        <li><a href="/contact">Contact</a></li>       
-                        <div class="uk-navbar-item">
-                            <a href="/contact" class="uk-button uk-button-primary">Get Started</a>
-                        </div>
-                    </ul>
+                    <ul class="uk-navbar-nav">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                        <li>
+                            <a href="#" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}<span class="uk-margin-small-left" uk-icon="chevron-down"></span></a>
+                            <div class="uk-navbar-dropdown">
+                                <ul class="uk-nav uk-navbar-dropdown-nav">
+                                    {{ range .Children }}
+                                    <li class="uk-active"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        </li>
+                        {{ else }}
+                        <li><a href="{{ .URL | absURL }}" style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}">{{ .Name }}</a></li>
+                        {{ end }}
+                        {{ end }}
+                        </ul>
                 </div>
-
 
             </div>
         </div>
@@ -46,32 +61,47 @@
 </div>
 
 
-{{/*  MOBILE MENU  */}}
+<!-- mobile -->
 <div uk-sticky="animation: uk-animation-slide-top-medium; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-dark; cls-inactive:uk-navbar-transparent; top: 400">
     <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-padding-small uk-box-shadow-small">
         <div class="uk-navbar-left">
             <a href="{{ .Site.BaseURL }}">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1629431811/scott-scheibe/national-beverage-company/blue-red-logo_c5rb0j.png" alt="" width="50" class="white-logo">
-
+                <img src="{{ .Site.Data.appearance.branding.logo }}" alt="" width="100">
             </a>
         </div>
         <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle></a>
+            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle style="{{ if $navColor.enable_white_text }}color: #fff{{ else }}color: #000;{{ end }}"></a>
         </div>
     </nav>
     </div>
-    <div id="mobile-menu-slide" style="z-index: 5;" uk-offcanvas="mode: reveal">
+    <div id="mobile-menu-slide" uk-offcanvas>
         <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-            <ul class="uk-nav-default uk-nav-parent-icon uk-nav-center uk-margin-auto-vertical" uk-nav>
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/clients">Clients</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/contact">Get Started</a></li>
+            <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical" uk-nav>
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                {{ if .HasChildren }}
+                <li class="uk-parent">
+                    <a href="#" class="uk-text-large uk-text-light">{{ .Name }}</a>
+                    <ul class="uk-nav-sub">
+                        {{ range .Children }}
+                        <li><a href="{{ .URL | absURL }}" class="uk-text-large uk-text-light">{{ .Name }}</a></li>
+                        {{ end }}
+                    </ul>
+                </li>
+                {{ else }}
+                <li><a href="{{ .URL | absURL }}" class="uk-text-large uk-text-light">{{ .Name }}</a></li>
+                {{ end }}
+                {{ end }}
                 <li class="uk-nav-divider"></li>
                 <li class="uk-nav-header"></li>
-                {{ if $social.facebook }}<li class="uk-display-inline-block"><a href="{{ $social.facebook }}" target="_blank" uk-icon="facebook"></a></li>{{ end }}
-                {{ if $social.instagram }}<li class="uk-display-inline-block"><a href="{{ $social.instagram }}" target="_blank" uk-icon="instagram"></a></li>{{ end }}
+                {{ if $headerSocial.instagram }}<a href="{{ $headerSocial.instagram }}" class="uk-icon-button uk-margin-small-right uk-margin-small-top" uk-icon="instagram" target="_blank"></a>{{ end }}
+                {{ if $headerSocial.facebook }}<a href="{{ $headerSocial.facebook }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="facebook" target="_blank"></a>{{ end }}
+                {{ if $headerSocial.pinterest }}<a href="{{ $headerSocial.pinterest }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="pinterest" target="_blank"></a>{{ end }}
+                {{ if $headerSocial.twitter }}<a href="{{ $headerSocial.twitter }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="twitter" target="_blank"></a>{{ end }}
+                {{ if $navContact.email }}<a href="{{ $navContact.email }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="mail" target="_blank"></a>{{ end }}
+                {{ if $navContact.phone }}<a href="{{ $navContact.phone }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="receiver" target="_blank"></a>{{ end }}
+                {{ if $navContact.cell }}<a href="{{ $navContact.cell }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="phone" target="_blank"></a>{{ end }}
+
             </ul>
         </div>
     </div>

@@ -1,2 +1,35 @@
 baseURL = "https://national-beverage-company.netlify.app/"
 languageCode = "en-us"
+[[menu.main]]
+name = "IDX Property Organizer"
+parent = "Buyers"
+url = "https://search.idxhome.com//organizer/login/133407"
+weight = 3
+[[menu.main]]
+name = "Search the MLS"
+parent = "Buyers"
+url = "https://search.idxhome.com/homesearch/133407"
+weight = 2
+[[menu.main]]
+name = "Blog"
+parent = "Resources"
+url = "/blog"
+weight = 3
+[[menu.main]]
+name = "Home Value Request"
+parent = "Sellers"
+url = "/home-valuation"
+weight = 1
+[[menu.main]]
+name = "Resources"
+weight = 4
+[[menu.main]]
+name = "Sellers"
+weight = 3
+[[menu.main]]
+name = "Buyers"
+weight = 2
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1

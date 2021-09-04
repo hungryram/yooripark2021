@@ -2,43 +2,10 @@
 label: Home Layout
 hide_body: true
 fields:
-- name: slideshow_settings
+- name: featured_section
   type: field_group
   config: {}
   fields:
-  - name: slide_animation
-    type: select
-    default: []
-    config:
-      required: false
-      options:
-      - slide
-      - fade
-      - scale
-      - pull
-      - push
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Slide Animation
-  - name: enable_autoplay
-    type: boolean
-    label: Enable Autoplay
-  - name: enable_ken_burns_effect
-    type: boolean
-    label: Enable Ken Burns Effect
-    description: Animation that slowly zooms in on slideshow.
-  label: Slideshow Settings
-- name: slideshow
-  type: field_group_list
-  fields:
-  - name: image
-    type: file
-    config:
-      maxSize: 64
-    label: Image
   - name: heading
     type: text
     config:
@@ -49,32 +16,18 @@ fields:
     default: ''
     config:
       required: false
-      wysiwyg: true
+      wysiwyg: false
       schema:
         format: markdown
     label: Body
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Slideshow
-- name: home_sections
-  type: blocks
-  label: Home Sections
-  template_types:
-  - active-listings
-  - sold-listings
-  - featured-idx-listings
-  - rental-listings
-  - featured-listings
-  - auction-listings
-  - home-testimonial
-  - home-agent
-  - featured-boxes
-  - home-blog
-  - text-and-image
-  - text-and-contact-form
-  - tiles
-  config:
-    min: 
-    max: 
+  - name: link
+    type: text
+    config:
+      required: false
+    label: Link
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  label: Featured Section

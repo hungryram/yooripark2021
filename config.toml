@@ -2,7 +2,7 @@ baseURL = "https://national-beverage-company.netlify.app/"
 languageCode = "en-us"
 [[menu.main]]
 name = "IDX Property Organizer"
-parent = "Buyers"
+parent = "Insurance Plans"
 url = "https://search.idxhome.com//organizer/login/133407"
 weight = 3
 [[menu.main]]
@@ -11,24 +11,14 @@ parent = "Buyers"
 url = "https://search.idxhome.com/homesearch/133407"
 weight = 2
 [[menu.main]]
-name = "Blog"
-parent = "Resources"
-url = "/blog"
-weight = 3
-[[menu.main]]
-name = "Home Value Request"
-parent = "Sellers"
-url = "/home-valuation"
-weight = 1
-[[menu.main]]
-name = "Resources"
-weight = 4
-[[menu.main]]
-name = "Sellers"
-weight = 3
-[[menu.main]]
-name = "Buyers"
+name = "Services"
 weight = 2
+[[menu.main]]
+name = "About"
+weight = 3
+[[menu.main]]
+name = "Contact"
+weight = 6
 [[menu.main]]
 name = "Home"
 url = "/"

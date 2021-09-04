@@ -8,28 +8,31 @@
         color: #000!important;
     }
 </style>
-<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200" {{ if $navColor.transparent_background }}{{ else }}style="background: {{ $navColor.header_background_color }};"{{ end }}>
-    <div class="top-navbar" style="background:#aa0817">
-        <nav class="uk-container uk-container-{{ if .IsHome }}medium{{ else }}large{{ end }}" uk-navbar>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav top-bar">
-                    {{ if $navContact.cell }}<li><a style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}" href="tel:{{ $navContact.cell }}">{{ $navContact.cell }}</a></li>{{ end }}
-                    {{ if $navContact.email }}<li><a style="{{ if $navColor.enable_white_text_top }}color: #ddd{{ else }}color: #000;{{ end }}" href="mailto:{{ $navContact.email }}">{{ $navContact.email }}</a></li>{{ end }}
-                </ul>
+<div class="top-navbar">
+    <nav class="main-nav uk-navbar-container" style="background:#19202A">
+        <div class="uk-container">
+            <div uk-navbar>
+                <div class="uk-navbar-left">
+                    <ul class="uk-navbar-nav top-bar">
+                        {{ if $navContact.cell }}<li><a style="color:#fff;padding-left:0" href="tel:{{ $navContact.cell }}">{{ $navContact.cell }}</a></li>{{ end }}
+                        {{ if $navContact.email }}<li><a style="color:#fff;" href="mailto:{{ $navContact.email }}">{{ $navContact.email }}</a></li>{{ end }}
+                    </ul>
+                </div>
+                <div class="uk-navbar-right">
+                        <a href="/contact" class="uk-button uk-button-primary">Get a Quote</a>
+                </div>
+
             </div>
-        </nav>
-    </div>
-    <nav class="main-nav uk-navbar-container uk-navbar-transparent"{{ if not .IsHome }} style="border-bottom: 1px solid rgb(213 213 213 / 20%);"{{ end }}>
-        <div class="uk-container uk-container-{{ if .IsHome }}medium{{ else }}large{{ end }}" style="padding-top:10px;padding-bottom:10px;">
+        </div>
+    </nav>
+</div>
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; top: 200">
+    <nav class="main-nav uk-navbar-container">
+        <div class="uk-container">
             <div uk-navbar>
                 <div class="uk-navbar-left">
                     <a href="{{ .Site.BaseURL }}">
-                        {{ if $navColor.transparent_background }}
-                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                        <img src="{{ .Site.Data.appearance.branding.dark_logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="dark-logo">
-                        {{ else }}
-                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="{{ .Site.Data.appearance.branding.logo_width }}" class="white-logo">
-                        {{ end }}
+                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="200" class="white-logo">
                     </a>
 
                 </div>

@@ -39,7 +39,7 @@ a.uk-button-secondary {
 }
 
 .accent {
-    color: #ba001a;
+    color: #aa0817;
 }
 
 .uk-white {
@@ -48,7 +48,7 @@ a.uk-button-secondary {
 
 button.uk-button-primary,
 a.uk-button-primary {
-    background: #ba001a;
+    background: #aa0817;
 }
 
 /* NAVBAR */
@@ -71,7 +71,7 @@ ul.uk-navbar-nav>li>a:not(.top-navbar a) {
 /* HERO */
 
 div.uk-overlay-hero {
-    background:rgb(34 34 34 / 5%);
+    background:rgb(9 10 21 / 20%);
 }
 
 footer.footer {
@@ -89,7 +89,7 @@ div.footer-credit ul li a {
 }
 
 .contact-detail span.uk-icon-button {
-    background: #ba001a;
+    background: #aa0817;
 }
 
 .contact-detail svg {

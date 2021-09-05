@@ -41,6 +41,10 @@ sections:
   - services
   - heading-and-body
 - type: document
+  path: content/faq/_index.md
+  label: FAQ
+  match: "**/*"
+- type: document
   path: content/testimonials/_index.md
   label: Testimonials
 - type: document

@@ -5,7 +5,18 @@ body h2,
 body h3,
 body h4,
 body h5,
-body h6 {
+body h6,
+body .uk-h1,
+body .uk-h2, 
+body .uk-h3, 
+body .uk-h4, 
+body .uk-h5, 
+body .uk-h6, 
+body .uk-heading-2xlarge, 
+body .uk-heading-large, 
+body .uk-heading-medium, 
+body .uk-heading-small, 
+body .uk-heading-xlarge {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -77,6 +88,11 @@ div.top-navbar .uk-navbar-nav>li>a {
     text-transform: unset;
 }
 
+div .uk-navbar-container>.uk-container .uk-navbar-left {
+    margin-left: 0;
+}
+
+
 /* body svg {
     color: #C3002F;
 } */
@@ -84,7 +100,26 @@ div.top-navbar .uk-navbar-nav>li>a {
 ul.uk-navbar-nav>li>a:not(.top-navbar a) {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+    transition: .1s;
     color: #000;
+}
+
+div ul.uk-navbar-nav>li>a:hover {
+    border-bottom: 3px solid #aa0817;
+    transition: .1s;
+    color: #aa0817;
+}
+
+ul.uk-nav-parent-icon>.uk-parent>a::after {
+    transform: rotate(
+        -90deg
+        );
+    position: absolute;
+}
+
+.mobile__wrapper ul li a {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
 /* HERO */
@@ -99,13 +134,15 @@ div.uk-overlay-hero {
     margin-top: -150px;
 }
 
-.featured__section .uk-card-default {
+.featured__section .uk-card-default,
+.service__box .uk-card-default {
     box-shadow: none;
     transition: .3s ease;
     border: 1px solid #eee;
 }
 
-.featured__section .uk-card-default:hover {
+.featured__section .uk-card-default:hover,
+.service__box .uk-card-default:hover {
     background: #aa0817;
     color: #fff;
     transition: .3s ease;
@@ -113,9 +150,16 @@ div.uk-overlay-hero {
 }
 
 .featured__section .uk-card-default:hover h3,
-.featured__section .uk-card-default:hover a.accent {
+.featured__section .uk-card-default:hover a.accent,
+.service__box .uk-card-default:hover h3,
+.service__box .uk-card-default:hover a.accent {
     color: #fff;
     transition: .3s ease;
+}
+
+.service__box .uk-card-default:hover a.accent,
+.featured__section .uk-card-default:hover a.accent {
+    text-decoration: underline;
 }
 
 .featured__section .uk-card-default h3,
@@ -132,7 +176,7 @@ div.uk-overlay-hero {
 /* FOOTER */
 
 footer.footer {
-    background: #181515;
+    background: #19202A;
 }
 
 footer.footer h6,
@@ -155,4 +199,21 @@ div.footer-credit ul li a {
 
 .contact-detail a {
     color: #000;
+}
+
+.service__list {
+    columns: 3;
+}
+
+.footer-credit ul li {
+    list-style: none;
+}
+
+footer.footer svg {
+    transition: .3s;
+}
+
+footer.footer svg:hover {
+    color: #aa0817;
+    transition: .3s;
 }

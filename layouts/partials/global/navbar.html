@@ -15,7 +15,7 @@
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav top-bar">
                         {{ if $navContact.cell }}<li><a style="color:#fff;padding-left:0" href="tel:{{ $navContact.cell }}">{{ $navContact.cell }}</a></li>{{ end }}
-                        {{ if $navContact.email }}<li><a style="color:#fff;" href="mailto:{{ $navContact.email }}">{{ $navContact.email }}</a></li>{{ end }}
+                        {{ if $navContact.email }}<li class="uk-visible@s"><a style="color:#fff;" href="mailto:{{ $navContact.email }}">{{ $navContact.email }}</a></li>{{ end }}
                     </ul>
                 </div>
                 <div class="uk-navbar-right">
@@ -73,38 +73,33 @@
             </a>
         </div>
         <div class="uk-navbar-right">
-            <a class="uk-navbar-toggle" uk-navbar-toggle-icon href="#mobile-menu-slide" uk-toggle></a>
+            <a class="uk-navbar-toggle" href="#modal-full" uk-navbar-toggle-icon uk-toggle></a>
         </div>
     </nav>
     </div>
-    <div id="mobile-menu-slide" uk-offcanvas>
-        <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-            <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical" uk-nav>
-                {{ $currentPage := . }}
-                {{ range .Site.Menus.main }}
-                {{ if .HasChildren }}
-                <li class="uk-parent">
-                    <a href="#" class="uk-text-large uk-text-light">{{ .Name }}</a>
-                    <ul class="uk-nav-sub">
-                        {{ range .Children }}
-                        <li><a href="{{ .URL | absURL }}" class="uk-text-large uk-text-light">{{ .Name }}</a></li>
-                        {{ end }}
-                    </ul>
-                </li>
-                {{ else }}
-                <li><a href="{{ .URL | absURL }}" class="uk-text-large uk-text-light">{{ .Name }}</a></li>
-                {{ end }}
-                {{ end }}
-                <li class="uk-nav-divider"></li>
-                <li class="uk-nav-header"></li>
-                {{ if $headerSocial.instagram }}<a href="{{ $headerSocial.instagram }}" class="uk-icon-button uk-margin-small-right uk-margin-small-top" uk-icon="instagram" target="_blank"></a>{{ end }}
-                {{ if $headerSocial.facebook }}<a href="{{ $headerSocial.facebook }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="facebook" target="_blank"></a>{{ end }}
-                {{ if $headerSocial.pinterest }}<a href="{{ $headerSocial.pinterest }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="pinterest" target="_blank"></a>{{ end }}
-                {{ if $headerSocial.twitter }}<a href="{{ $headerSocial.twitter }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="twitter" target="_blank"></a>{{ end }}
-                {{ if $navContact.email }}<a href="{{ $navContact.email }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="mail" target="_blank"></a>{{ end }}
-                {{ if $navContact.phone }}<a href="{{ $navContact.phone }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="receiver" target="_blank"></a>{{ end }}
-                {{ if $navContact.cell }}<a href="{{ $navContact.cell }}" class="uk-icon-button  uk-margin-small-right uk-margin-small-top" uk-icon="phone" target="_blank"></a>{{ end }}
 
-            </ul>
-        </div>
+
+
+<div id="modal-full" class="uk-modal-full uk-modal mobile__wrapper" uk-modal>
+    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" uk-height-viewport>
+        <button class="uk-modal-close-full" type="button" uk-close></button>
+
+        <ul class="uk-nav-default uk-nav-parent-icon uk-margin-auto-vertical uk-text-center" uk-nav>
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ if .HasChildren }}
+            <li class="uk-parent">
+                <a href="#" class="uk-text-light">{{ .Name }}</a>
+                <ul class="uk-nav-sub">
+                    {{ range .Children }}
+                    <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+                    {{ end }}
+                </ul>
+            </li>
+            {{ else }}
+            <li><a href="{{ .URL | absURL }}" class="uk-text-light">{{ .Name }}</a></li>
+            {{ end }}
+            {{ end }}
+        </ul>
     </div>
+</div>

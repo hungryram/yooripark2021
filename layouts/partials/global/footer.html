@@ -1,30 +1,51 @@
-{{ $social := .Site.Data.profile.social }}
+{{ $footerSocial := .Site.Data.profile.social_media }}
+{{ $contact := .Site.Data.profile.contact_information }}
 
 <footer class="footer">
     <div class="uk-section">
-        <div class="uk-container">
-            <div class="uk-grid-large uk-child-width-1-3@s" uk-grid>
-                <div class="footer-text">
-                    <h6 class="uk-text-bold accent">National Beverage Company</h6>
-                    <p>We're a Southern California vending machine company providing free vending machine services to surrounding businesses in neighboring counties such as Los Angeles, Riverside, San Bernardino and Orange County. </p>
+        <div class="uk-container uk-container-">
+            <div class="uk-grid-match uk-grid-large uk-text-left" uk-grid>
+                <div class="footer-text uk-width-1-4@m">
+                    <a href="{{ .Site.BaseURL }}">
+                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="200" class="white-logo">
+                    </a>
+                    <p class="uk-white">RN Insurance is committed to providing clients with the highest quality insurance plans</p>
+                    <div class="accent">
+                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-margin-small-right" uk-icon="icon: facebook; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-margin-small-right" uk-icon="icon: instagram; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-margin-small-right" uk-icon="icon: linkedin; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-margin-small-right" uk-icon="icon: pinterest; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-margin-small-right" uk-icon="icon: twitter; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-margin-small-right" uk-icon="icon: youtube; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.tiktok }}<a href="{{ $footerSocial.tiktok }}" class="uk-margin-small-right" uk-icon="icon: tiktok; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-margin-small-right" uk-icon="icon: yelp; ratio: 1"></a>{{ end }}
+                    </div>
+                </div>
+                <div class="uk-width-1-4@m">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Contact</h3>
+                        <ul class="uk-list">
+                            <li><a href="/custom-website-design">{{ $contact.email }}</a></li>
+                            <li><a href="/ecommerce-website-design">{{ $contact.phone }}</a></li>
+                            <li><a href="/ecommerce-website-design">{{ $contact.cell }}</a></li>
+                        </ul>           
+                    </div>
                 </div>
 
-                <div>
-                    <h6 class="uk-text-bold accent">Contact</h6>
-                    <ul class="uk-list">
-                        <li><a href="/custom-website-design">info@nationalbeveragecompany.com</a></li>
-                        <li><a href="/ecommerce-website-design">866-685-6789</a></li>
-                    </ul>           
-                </div>
-                <div>
+                <div class="uk-width-1-2@m">
                     <div>
-                        <h6 class="uk-text-bold accent">Quick Links</h6>
-                        <ul class="uk-list">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/products">Products</a></li>
-                            <li><a href="/clients">Clients</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/contact">Get Started</a></li>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Insurance</h3>
+                        <ul class="uk-list service__list">
+                            <li><a href="/">Auto Insurance</a></li>
+                            <li><a href="/products">Motorcycle Insurance</a></li>
+                            <li><a href="/contact">Home Insurance</a></li>
+                            <li><a href="/contact">Renters Insurance</a></li>
+                            <li><a href="/contact">Condo Insurance</a></li>
+                            <li><a href="/clients">Commercial Auto Insurance</a></li>
+                            <li><a href="/contact">Flood Insurance</a></li>
+                            <li><a href="/contact">Recreational Vehicle Insurance</a></li>
+                            <li><a href="/contact">Business Insurance</a></li>
+                            <li><a href="/contact">Combine and Save</a></li>
                         </ul>                
                     </div>
                 </div>
@@ -33,13 +54,18 @@
     </div>
     <div class="uk-container uk-padding footer-credit">
         <div class="uk-grid">
+            <div class="uk-width-1-2@m">
+                <ul class="uk-padding-remove">
+                    <li><span class="uk-text-small">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}</span>  &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a></li>
+                </ul>
+                
+            </div>
             <div class="uk-width-1-2@s">
-                <p class="uk-light uk-text-small">&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}  &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a></p>
-                <ul class="hr-legals uk-padding-remove">
+                <ul class="hr-legals">
                     {{ range where $.Site.Pages.ByWeight "Type" "legal" }}
-                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-right" onclick="navbaractive()"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                    <li class="uk-light uk-text-small uk-display-inline uk-margin-medium-left" onclick="navbaractive()"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                     {{ end }}
-                  </ul>
+                </ul>
             </div>
         </div>
     </div>

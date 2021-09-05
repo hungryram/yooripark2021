@@ -1,4 +1,4 @@
-baseURL = "https://national-beverage-company.netlify.app/"
+baseURL = "https://rn-insurance1.netlify.app/"
 languageCode = "en-us"
 [[menu.main]]
 name = "Resources"

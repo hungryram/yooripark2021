@@ -1,9 +1,12 @@
 {{ partial "global/head" . }}
 {{ partial "global/navbar" . }}
-<div class="uk-section" style="background: #dbdbdb;">
+<div class="uk-section uk-section-small page__banner uk-card" style="background: #dbdbdb">
+    <div class="page__slider" uk-scrollspy="cls:uk-animation-fade"></div>
     <div class="uk-container">
-        <h1 class="h1-title">{{ .Title }}</h1>
-        {{ partial "templates/breadcrumbs" . }}
+        <div class="page__banner__inner">
+            <h1 class="h1-title">{{ .Title }}</h1>
+            {{ partial "templates/breadcrumbs" . }}
+        </div>
     </div>
 </div>
 <main>

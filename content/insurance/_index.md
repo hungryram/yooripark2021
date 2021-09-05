@@ -1,6 +1,6 @@
 +++
 body = "View the list of services from our agency."
-title = "Our Services"
+title = "Insurance Plans"
 [menu.main]
 name = "Insurance Plans"
 weight = 2

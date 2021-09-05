@@ -26,15 +26,16 @@
                         <h3 class="uk-h5 uk-white uk-text-uppercase">Contact</h3>
                         <ul class="uk-list">
                             <li><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></li>
-                            <li><a href="tel:{{ $contact.phone }}">{{ $contact.phone }}</a></li>
-                            <li><a href="tel:{{ $contact.cell }}">{{ $contact.cell }}</a></li>
+                            <li><a href="tel:{{ $contact.phone }}"><strong>Office: </strong>{{ $contact.phone }}</a></li>
+                            <li><a href="tel:{{ $contact.cell }}"><strong>Direct: </strong>{{ $contact.cell }}</a></li>
+                            <li><a href="https://www.google.com/maps/place/{{ $contact.address }} {{ $contact.city }} {{ $contact.state }} {{ $contact.zip_code }}" target="_blank">{{ $contact.address }}, {{ $contact.city }}, {{ $contact.state }} {{ $contact.zip_code }}</a></li>
                         </ul>           
                     </div>
                 </div>
 
                 <div class="uk-width-1-2@m">
                     <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Insurance</h3>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Insurances</h3>
                         <ul class="uk-list service__list">
                             {{ range where .Site.RegularPages "Type" "insurance" }}
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

@@ -9,11 +9,8 @@
             {{ range first 6 (where .Site.RegularPages "Type" "insurance") }}
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="https://res.cloudinary.com/hungryram19/image/upload/v1630734411/randy-nong/rn-insurance/scale_c1kkqk_bqqijx.png" alt="" width="100" width="100" class="uk-margin-small-top">
-                    </div>
-                    <div class="uk-card-body" style="padding-top:10px">
-                        <h3 class="uk-h4 uk-text-bold">Life Insurance</h3>
+                    <div class="uk-card-body">
+                        <h3 class="uk-h4 uk-text-bold">{{ .Title }}</h3>
                         <p>Our insurance advisors have years of experience in the insurance industry and serve as your advocate through the entire claim process.</p>
                         <div class="uk-margin-small-top">
                             <a href="{{ .Permalink }}" class="accent uk-text-bold">Learn More <span uk-icon="chevron-right"></span></a>
@@ -24,7 +21,7 @@
             {{ end }}
         </div>
         <div class="uk-margin-medium-top uk-text-center">
-            <a href="/services" class="uk-button uk-button-primary slide_right">View more</a>
+            <a href="/insurance" class="uk-button uk-button-primary slide_right">More insurances</a>
         </div>
     </div>
 </div>

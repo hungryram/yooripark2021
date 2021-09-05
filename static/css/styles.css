@@ -29,7 +29,7 @@ body {
 }
 
 ul.uk-breadcrumb>*>* {
-    color: #19202A;
+    color: #fff;
 }
 
 ul.uk-breadcrumb li:last-child a {
@@ -55,7 +55,7 @@ form label {
 }
 
 h1.h1-title {
-    color:#19202A;
+    color:#fff;
 }
 
 a.uk-button-secondary {
@@ -99,15 +99,42 @@ body .uk-button-primary:focus, body .uk-button-primary:hover {
     color: #fff;
 }
 
-/* @media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     div.page__banner {
         background: #DBDBDB!important;
     }
 
-    h1.h1-title {
+    h1.h1-title,
+    ul.uk-breadcrumb>*>* {
         color:#19202A;
     }
-} */
+}
+
+@media screen and (min-width:800px) {
+    div.page__banner .page__slider {
+        content: '';
+        background: #aa0817;
+        position: absolute;
+        width: 45%;
+        height: 100%;
+        top: 0;
+        -webkit-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+        transform-origin: 100% 0;
+        -webkit-transform: skew(
+    -45deg
+    );
+        -ms-transform: skew(-45deg);
+        transform: skew(
+    -45deg
+    );
+    }
+}
+
+div.page__banner__inner {
+    position: relative;
+    z-index: 1;
+}
 
 /* NAVBAR */
 
@@ -232,7 +259,8 @@ div.hero-text p {
 .featured__section .uk-card-default:hover svg,
 .featured__section .uk-card-default:hover a.accent,
 .service__box .uk-card-default:hover h3,
-.service__box .uk-card-default:hover a.accent {
+.service__box .uk-card-default:hover a.accent,
+.service__box .uk-card-default:hover svg {
     color: #fff;
     transition: .3s ease;
     fill: #fff;
@@ -248,7 +276,8 @@ div.hero-text p {
     transition: .3s ease;
 }
 
-.featured__section .uk-card-default .svg__icons svg {
+.featured__section .uk-card-default .svg__icons svg,
+.service__box .uk-card-default .svg__icons svg {
     width: 50px;
 }
 

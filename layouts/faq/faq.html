@@ -53,7 +53,7 @@
                 <div class="uk-width-1-2@s">
                     <h3>Insurance Coverage</h3>
                     <ul class="uk-list uk-list-striped service__list__faq">
-                        {{ range where .Site.RegularPages "Type" "services" }}
+                        {{ range where .Site.RegularPages "Type" "insurance" }}
                         <li><a href="{{ .Permalink }}" class="uk-link-text uk-margin-small-right">{{ .Title }}</a><span uk-icon="icon: chevron-double-right"></span></li>
                         {{ end }}
                     </ul>

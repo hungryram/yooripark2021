@@ -7,9 +7,6 @@ weight = 4
 name = "About"
 weight = 3
 [[menu.main]]
-name = "Insurance Plans"
-weight = 2
-[[menu.main]]
 name = "Home"
 url = "/"
 weight = 1

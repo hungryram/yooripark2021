@@ -6,11 +6,11 @@
                 {{ range $featured.blocks }}
                 <div>
                     <div class="uk-card uk-card-default">
-                        {{ if .image }}
                         <div class="uk-card-media-top">
-                            <img src="{{ .image }}" alt="" width="100" width="100" class="uk-margin-small-top">
+                            <div class="uk-padding svg__icons">
+                                {{ .svg | safeHTML }}
+                            </div>
                         </div>
-                        {{ end }}
                         <div class="uk-card-body" style="padding-top:10px">
                             <h3 class="uk-h4 uk-text-bold">{{ .heading }}</h3>
                             <p>{{ .body }}</p>

@@ -189,6 +189,7 @@ div.uk-overlay-hero {
 .service__box .uk-card-default:hover a.accent {
     color: #fff;
     transition: .3s ease;
+    fill: #fff;
 }
 
 .service__box .uk-card-default:hover a.accent,
@@ -200,6 +201,11 @@ div.uk-overlay-hero {
 .featured__section .uk-card-default a {
     transition: .3s ease;
 }
+
+.featured__section .uk-card-default .svg__icons svg {
+    width: 50px;
+}
+
 
 /* NUMBER COUNTER */
 

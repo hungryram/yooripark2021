@@ -155,9 +155,21 @@ div.uk-overlay-hero {
     background:rgb(9 10 21 / 20%);
 }
 
+div.hero-text p {
+    font-size: 17.5px;
+}
+
 @media screen and (max-width: 800px) {
     div.hero-text {
         padding: 20px;
+    }
+
+    div.hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    div.hero-text p.uk-text-normal {
+        font-size: 15px;
     }
 }
 

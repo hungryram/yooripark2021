@@ -1,7 +1,7 @@
 +++
 title = "Umbrella Insurance"
 [menu.main]
-parent = "Services"
+parent = "Insurance Plans"
 weight = 9
 
 +++

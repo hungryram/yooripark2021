@@ -1,7 +1,7 @@
 +++
 title = "Condo Insurance"
 [menu.main]
-parent = "Services"
+parent = "Insurance Plans"
 weight = 3
 
 +++

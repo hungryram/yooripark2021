@@ -1,7 +1,7 @@
 +++
 title = "Renters Insurance"
 [menu.main]
-parent = "Services"
+parent = "Insurance Plans"
 weight = 8
 
 +++

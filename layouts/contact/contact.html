@@ -2,30 +2,48 @@
 {{ $footerContact := .Site.Data.profile.contact_information }}
 <div class="uk-section">
     <div class="uk-container">
-        <div uk-grid>
+        <div class="uk-width-1-1 uk-text-center uk-margin-large-bottom">
+            <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
+                <div class="uk-width-2xlarge">
+                    <h2>Contact Us</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laboriosam minus explicabo labore aut maxime maiores praesentium sapiente unde ipsa molestias dicta deleniti. Molestias, quod veniam vero tempore odit officiis!</p>
+                </div>
+            </div>
+        </div>
+        <div class="uk-child-width-expand@s uk-text-center@s contact__icons uk-margin-medium-bottom" uk-grid>
+            <div>
+                <div class="uk-card">
+                    <address><a href="https://www.google.com/maps/place/{{ $footerContact.address }} {{ $footerContact.city }} {{ $footerContact.state }} {{ $footerContact.zip_code }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="location" style="background: #aa0817;color:#fff"></span> {{ $footerContact.address }}, {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</a></address>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card">
+                    <a href="tel:{{ $footerContact.phone }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="receiver" style="background: #aa0817;color:#fff"></span>{{ $footerContact.phone }}</a>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card">
+                    <a href="tel:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="mail" style="background: #aa0817;color:#fff"></span>{{ $footerContact.email }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="uk-margin-large-bottom">
+            <hr>
+        </div>
+        <div class="uk-grid-large" uk-grid>
             <div class="uk-width-1-2@s">
-                <div class="uk-card uk-card-body">
-                    <h3>Contact National Beverage Now & Experience Truly Refreshing Service Today!</h3>
-                    <p>Free, Customizable Vending Service is as easy as <strong>1-2-3</strong></p>
-                    <ol>
-                        <li>Complete the form or call us (866) 685-6789</li>
-                        <li>A site analyst comes to your business to insure that we bring the proper vending equipment for your facility and to help you determine the best location for the vending machines within your facility.</li>
-                        <li>The vending equipment is delivered to your facility.</li>
-                    </ol>
-                    <ul class="uk-list contact-detail">
-                        <li><a href="tel:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="mail"></span>info@nationalbeveragecompany.com</a></li>
-                        <li><a href="tel:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="receiver"></span>(866) 685-6789</a></li>
-                    </ul>
+                <div class="uk-card">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.2447498789907!2d-71.32865368453497!3d42.634971079169375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a464d36f32cf%3A0x945105aaa8ffaa63!2s296%20Westford%20St%2C%20Lowell%2C%20MA%2001851!5e0!3m2!1sen!2sus!4v1630795267947!5m2!1sen!2sus" height="450" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div class="uk-width-1-2@s">
-                <div class="uk-card uk-card-body">
-                    <h3>Start your free vending service</h3>
+                <div class="uk-card">
+                    <h3>Send an email</h3>
                     <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
                         <input name="bot-field" type="hidden" />
                         <input type="hidden" name="Subject" value="Website Contact Form">
                         <div class="uk-width-1-2@s">
-                            <label for="uk-input-name">Full Name*</label>
+                            <label for="uk-input-name">Name*</label>
                             <input class="uk-input" type="text" name="Name" id="uk-input-name" required>
                         </div>
                         <div class="uk-width-1-2@s">
@@ -37,27 +55,7 @@
                             <input class="uk-input" type="text" id="input-email" name="Email" required>
                         </div>
                         <div class="uk-width-1-1">
-                            <label for="input-company">Company*</label>
-                            <input class="uk-input" type="text" id="input-company" name="Company" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="input-address">Address*</label>
-                            <input class="uk-input" type="text" id="input-address" name="Address" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="input-city">City*</label>
-                            <input class="uk-input" type="text" id="input-city" name="City" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="cross-streets">Cross Streets*</label>
-                            <input class="uk-input" type="text" id="cross-streets" name="Cross Streets" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="employee-count">Number of onsite employees*</label>
-                            <input class="uk-input" type="text" id="employee-count" name="onsite employees" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="textarea-info">Additional Information*</label>
+                            <label for="textarea-info">Your Message*</label>
                             <textarea class="uk-textarea" rows="5" id="textarea-info" name="Additional Info"></textarea>
                         </div>
                         <div class="uk-width-1-1">

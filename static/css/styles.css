@@ -28,6 +28,20 @@ body {
     line-height: 27px;
 }
 
+ul.uk-breadcrumb>*>* {
+    color: #19202A;
+}
+
+ul.uk-breadcrumb li:last-child a {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+ul.uk-breadcrumb>*>:focus,
+ul.uk-breadcrumb>*>:hover {
+    color: #fff;
+}
+
 a.uk-accordion-title {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -38,6 +52,10 @@ form label {
     color: #000;
     font-size: 12px;
     font-weight: 600;
+}
+
+h1.h1-title {
+    color:#19202A;
 }
 
 a.uk-button-secondary {
@@ -81,6 +99,16 @@ body .uk-button-primary:focus, body .uk-button-primary:hover {
     color: #fff;
 }
 
+/* @media screen and (max-width: 800px) {
+    div.page__banner {
+        background: #DBDBDB!important;
+    }
+
+    h1.h1-title {
+        color:#19202A;
+    }
+} */
+
 /* NAVBAR */
 
 div.top-navbar .uk-navbar-nav>li>a {
@@ -97,7 +125,7 @@ div.uk-navbar-dropdown {
 }
 
 div.uk-navbar-dropdown ul li {
-    padding: 15px;
+    padding: 5px 10px;
 }
 
 div.uk-navbar-dropdown ul li:hover {
@@ -235,6 +263,18 @@ div.hero-text p {
 .contact__icons a:hover {
     color: #aa0817;
     transition: .3s;
+}
+
+/* SINGLE SERVICE PAGE */
+
+div.box-top {
+    position: absolute;
+    background: #aa0817;
+    width: 200px;
+    left: -50px;
+    z-index: -1;
+    bottom: 30px;
+    top: 30px;
 }
 
 /* FOOTER */

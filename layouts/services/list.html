@@ -22,51 +22,20 @@
 <div class="uk-section uk-section-small">
     <div class="uk-container">
             <h2 class="uk-margin-small-top uk-margin-medium-bottom">Highest-Quality Coverages</h2>
-        <div class="uk-child-width-1-3@s" uk-grid>
+        <div class="uk-child-width-1-3@s uk-text-center featured__section" uk-grid>
+            {{ range (where .Site.RegularPages "Type" "services") }}
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="images/light.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <div class="uk-card-body" style="padding-top:10px">
+                        <h3 class="uk-h4 uk-text-bold">{{ .Title }}</h3>
+                        <p>Our insurance advisors have years of experience in the insurance industry and serve as your advocate through the entire claim process.</p>
+                        <div class="uk-margin-small-top">
+                            <a href="{{ .Permalink }}" class="accent uk-text-bold">Learn More <span uk-icon="chevron-right"></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="images/light.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="images/light.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="images/light.jpg" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </div>
+            {{ end }}
         </div>
     </div>
 </div>

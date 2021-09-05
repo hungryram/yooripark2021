@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="uk-section single__service__page">
+    <div class="uk-container">
+        <div class="uk-grid-large" uk-grid>
+            <div class="uk-width-1-2@s uk-text-center">
+                <div class="uk-card">
+                    <div class="box-top" uk-scrollspy="cls:uk-animation-slide-right-small"></div>
+                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1630823868/randy-nong/rn-insurance/romain-dancre-doplSDELX7E-unsplash_ltguak.jpg" alt="">
+                </div>
+            </div>
+            <div class="uk-width-1-2@s uk-flex uk-flex-middle">
+                <div class="uk-card">
+                    <h2>Get the {{ .Title }} you need</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa mollitia ex officia doloremque sed provident explicabo deserunt dolore a! Consequatur quidem laborum at cumque vel reiciendis. Voluptatum exercitationem vel aut?</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio fuga laboriosam delectus, itaque minima repudiandae. Placeat natus vero debitis error aut amet tenetur? Quos qui explicabo architecto reiciendis aut magnam!ds</p>
+                    <a href="/contact" class="uk-button uk-button-primary slide_right">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="uk-container">
+        <div style="background: #fafafa;">
+            <div class="uk-section">
+                <div class="uk-container">
+                    <div class="uk-flex uk-flex-center">
+                        <div class="uk-width-2xlarge uk-text-center">
+                            <h2 class="uk-dark uk-text-center" style="font-size:1.5rem">Secure your future with {{ .Title }} Offering you the best protection for your unique situation at the right price</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="uk-section single__service__page">
+    <div class="uk-container">
+        <div class="uk-grid-large" uk-grid>
+            <div class="uk-width-1-1 uk-flex uk-flex-middle">
+                <div class="uk-card">
+                    <h2 class="uk-margin-large-bottom">Questions about {{ .Title }}</h2>
+                    <ul uk-accordion="collapsible: false">
+                        <li>
+                            <a class="uk-accordion-title uk-text-small uk-text-bold" href="#"><h3 style="font-size:1rem;">What factors can affect the cost of my automobile insurance?</h3 style="font-size:1rem;"></a>
+                            <div class="uk-accordion-content">
+                                <p>The type of car you drive, the purpose the car serves, your driving record, and where the car is garaged can all affect how much your automobile insurance will cost you.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-small uk-text-bold" href="#"><h3 style="font-size:1rem;">How do I set up a health savings account?</h3 style="font-size:1rem;"></a>
+                            <div class="uk-accordion-content">
+                                <p>You can set an HSA up with many health insurance carriers as well as most local and national banks. The only caveat is that you must have an approved high-deductible health plan in order to open a health savings account.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-small uk-text-bold" href="#"><h3 style="font-size:1rem;">What is universal life insurance?</h3 style="font-size:1rem;"></a>
+                            <div class="uk-accordion-content">
+                                <p>Universal life insurance is a unique product in that it is actually two different products packaged together.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="uk-accordion-title uk-text-bold" href="#"><h3 style="font-size:1rem;">Do I need long-term care insurance?</h3 style="font-size:1rem;"></a>
+                            <div class="uk-accordion-content">
+                                <p>Long-term care insurance becomes more important every single day as the cost of providing health care rises. Families are going bankrupt paying the long-term care expense for elder loved-ones that can no longer make it on their own.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{{ end }}

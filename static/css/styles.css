@@ -175,6 +175,12 @@ ul.uk-nav-parent-icon>.uk-parent>a::after {
 .mobile__wrapper ul li a {
     font-size: 1.5rem;
     margin: 10px 0;
+    color: #eee;
+    transition: .3s;
+}
+
+div.uk-modal-dialog {
+    background: #19202A;
 }
 
 /* HERO */
@@ -275,6 +281,35 @@ div.box-top {
     z-index: -1;
     bottom: 30px;
     top: 30px;
+}
+
+/* FAQ */
+
+div.uk-card-secondary {
+    background: #f3f3f3;
+    box-shadow: none;
+    transition: .3s;
+}
+
+div.uk-card-secondary.uk-card-hover:hover {
+    background: #f3f3f3;
+    color: inherit;
+    box-shadow: none;
+}
+
+.faq__page .uk-card-body {
+    padding: 20px;
+}
+
+.faq__page .uk-card-body h3 {
+    font-size: 1rem;
+    border-left: 4px solid #aa0817;
+    padding-left: 10px;
+}
+
+ul.service__list__faq li a:hover {
+    color: #aa0817;
+    transition: .3s;
 }
 
 /* FOOTER */

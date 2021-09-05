@@ -1,6 +1,15 @@
 baseURL = "https://national-beverage-company.netlify.app/"
 languageCode = "en-us"
 [[menu.main]]
+name = "Resources"
+weight = 4
+[[menu.main]]
+name = "About"
+weight = 3
+[[menu.main]]
+name = "Insurance Plans"
+weight = 2
+[[menu.main]]
 name = "Home"
 url = "/"
 weight = 1

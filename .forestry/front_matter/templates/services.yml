@@ -8,11 +8,7 @@ fields:
     required: false
   label: Title
 - name: svg
-  type: textarea
-  default: ''
+  type: text
   config:
     required: false
-    wysiwyg: false
-    schema:
-      format: markdown
   label: SVG

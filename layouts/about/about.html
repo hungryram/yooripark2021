@@ -1,3 +1,60 @@
 {{ define "main" }}
+{{ $footerContact := .Site.Data.profile.contact_information }}
 
+<div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid">
+            <div class="uk-width-3-5">
+                <h2>About RN Insurance</h2>
+                <p><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ut nesciunt ex iusto ipsa, dolor eligendi magni distinctio praesentium sequi dolores suscipit voluptatem delectus in odio dignissimos corporis molestiae libero.</strong></p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque pariatur sapiente error earum nesciunt accusantium aliquam sequi voluptates, tempora consequuntur officiis praesentium dolorem mollitia similique natus incidunt molestias veritatis unde!</p>
+                <div class="uk-child-width-expand@m uk-grid-small uk-margin-medium-top" uk-grid>
+                    <div>
+                        <div class="uk-card">
+                            <a href="https://www.google.com/maps/place/{{ $footerContact.address }} {{ $footerContact.city }} {{ $footerContact.state }} {{ $footerContact.zip_code }}" target="_blank" class="uk-link-text uk-text-bold"><span class="uk-margin-small-right uk-icon-button" uk-icon="location" style="background: #aa0817;color:#fff"></span> Visit the office</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card">
+                            <a href="tel:{{ $footerContact.phone }}" class="uk-link-text uk-text-bold"><span class="uk-margin-small-right uk-icon-button" uk-icon="receiver" style="background: #aa0817;color:#fff"></span>{{ $footerContact.phone }}</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="uk-card">
+                            <a href="mailto:{{ $footerContact.email }}" class="uk-link-text uk-text-bold"><span class="uk-margin-small-right uk-icon-button" uk-icon="mail" style="background: #aa0817;color:#fff"></span>{{ $footerContact.email }}</a>                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-expand">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1630868182/randy-nong/rn-insurance/ruthson-zimmerman-Ws4wd-vJ9M0-unsplash_lx1wa0.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="uk-section uk-section-small">
+    <div class="uk-container">
+        <div class="uk-padding" style="background: #19202A">
+            <div class="uk-flex uk-flex-center uk-text-center">
+                <div class="uk-width-2xlarge uk-white">
+                    <h2 class="uk-white" style="font-size:1.5rem">Secure your future with RN Insurance</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque sint, voluptates molestiae, ab recusandae repellendus facere eius repudiandae delectus accusantium sunt eaque harum corporis doloribus dolores rem distinctio unde facilis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="uk-section">
+    <div class="uk-container">
+        <h2>Why Choose RN Insurance</h2>
+        <hr>
+        <h3 class="uk-h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, eveniet quidem repellat reprehenderit a nisi explicabo itaque consequuntur</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet distinctio iure maxime, rerum eos culpa mollitia assumenda tenetur, beatae laudantium, id cupiditate magnam facere recusandae voluptatibus? Qui, mollitia quo!Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet distinctio iure maxime, rerum eos culpa mollitia assumenda tenetur, beatae laudantium, id cupiditate magnam facere recusandae voluptatibus? Qui, mollitia quo!Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet distinctio iure maxime, rerum eos culpa mollitia assumenda tenetur, beatae laudantium, id cupiditate magnam facere recusandae voluptatibus? Qui, mollitia quo!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet distinctio iure maxime, rerum eos culpa mollitia assumenda tenetur, beatae laudantium, id cupiditate magnam facere recusandae voluptatibus? Qui, mollitia quo!</p>
+        <h3 class="uk-h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, eveniet quidem repellat reprehenderit a nisi explicabo itaque consequuntur</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis amet distinctio iure maxime, rerum eos culpa mollitia assumenda tenetur, beatae laudantium, id cupiditate magnam facere recusandae voluptatibus?</p>
+        <hr>
+        <a href="" class="uk-button uk-button-primary">Get a quote</a>
+    </div>
+</div>
 {{ end }}

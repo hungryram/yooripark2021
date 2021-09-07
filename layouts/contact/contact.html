@@ -58,9 +58,9 @@
                             <label for="input-phone">Email*</label>
                             <input class="uk-input" type="text" id="input-email" name="Email" required>
                         </div>
-                        <div class="uk-width-1-1">
-                            <label for="insurance-type">Inquiry Type*</label>
-                            <select class="uk-select" name="package" id="insurance-type" required>
+                        <div class="uk-width-1-1 insurance-drop">
+                            <label for="insurance-type">Inquiry Type* <em style="color:inherit">Choose multiple if needed</em></label>
+                            <select class="uk-select insurance-multiselect" name="package" id="insurance-type" multiple required>
                                 {{ range where .Site.RegularPages "Type" "insurance" }}
                                 <option value="{{ .Title }}">{{ .Title }}</option>
                                 {{ end }}
@@ -82,4 +82,16 @@
         </div>
     </div>
 </div>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".insurance-multiselect").select2({
+          dropdownParent: $(".insurance-drop")
+        });
+      });
+</script>
 {{ end }}

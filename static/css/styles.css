@@ -50,7 +50,7 @@ a.uk-accordion-title {
 
 form label {
     color: #000;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -390,4 +390,12 @@ footer.footer svg:hover {
     footer.footer .service__list {
         columns: 2;
     }
+}
+
+/* SELECT 2 */
+
+body .select2-container--default .select2-selection--multiple {
+    border-radius: 0;
+    border: 1px solid #e5e5e5;
+    height: 40px;
 }

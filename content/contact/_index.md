@@ -1,7 +1,7 @@
 +++
-meta_description = "We would like to know what type of vending machine service you are looking for, healthy snacks, sodas teas and water, brewed coffee, hot meals and more..."
+meta_description = "Work with Randy Nong at RN Insurance. Please don’t hesitate to call or come in and see me with any insurance related problems."
 title = "Contact"
-title_tag = "National Beverage Co. - Ready to provide Free vending machine service to you in Orange County, Los Angeles, San Bernardino & Riverside."
+title_tag = "Contact RN Insurance"
 [menu.main]
 weight = 5
 

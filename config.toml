@@ -1,6 +1,7 @@
 baseURL = "https://rn-insurance1.netlify.app/"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 languageCode = "en-us"
+enableRobotsTXT = "true"
 [[menu.main]]
 name = "Resources"
 weight = 4

@@ -60,7 +60,7 @@
                         </div>
                         <div class="uk-width-1-1 insurance-drop">
                             <label for="insurance-type">Inquiry Type* <em style="color:inherit">Choose multiple if needed</em></label>
-                            <select class="uk-select insurance-multiselect" name="package" id="insurance-type" multiple required>
+                            <select class="uk-select insurance-multiselect" name="insurance[]" id="insurance-type" multiple="multiple" required>
                                 {{ range where .Site.RegularPages "Type" "insurance" }}
                                 <option value="{{ .Title }}">{{ .Title }}</option>
                                 {{ end }}
@@ -95,3 +95,4 @@
       });
 </script>
 {{ end }}
+

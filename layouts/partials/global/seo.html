@@ -13,12 +13,6 @@
 <meta property="og:image" content="{{ . }}"/>
 {{ end }}
 
-{{- if .Params.author -}}
-{{- with .Site.GetPage .Params.author -}}
-<meta property="article:author" content="{{ .Permalink }}" />
-{{ end }}
-{{ end }}
-
 {{ if $.IsHome }}
     <meta property="og:title" content="{{ $seo.title_tag }}"/>
     <meta property="og:description" content="{{ $seo.meta_description }}"/>
@@ -55,3 +49,13 @@
     <meta name="description" content="{{ .Summary | truncate 170 }}">
     {{ end }}
 {{- end -}}
+
+
+<link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" sizes="144x144" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" sizes="114x114" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" sizes="72x72" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<link rel="apple-touch-icon" href="{{ .Site.Data.appearance.branding.favicon }}" />
+<meta name="application-name" content="{{ $profile }}">

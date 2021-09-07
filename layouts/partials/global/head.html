@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="{{ .Site.Data.appearance.branding.favicon }}" />
     <link rel="canonical" href="{{ .Permalink }}" />
     {{ partial "global/seo" . }}
+    {{ partial "global/social" . }}
 
     {{ if .IsHome }}
     {{ partial "global/schema" . }}
@@ -27,4 +28,4 @@
 
 
 </head>
-<body id="body" data-barba="wrapper">
+<body id="body">

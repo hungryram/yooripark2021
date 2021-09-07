@@ -4,7 +4,7 @@
 <footer class="footer">
     <div class="uk-section">
         <div class="uk-container uk-container-">
-            <div class="uk-grid-match uk-grid-large uk-text-left" uk-grid>
+            <div class="uk-grid-match uk-grid-medium uk-text-left" uk-grid>
                 <div class="footer-text uk-width-1-4@m">
                     <a href="{{ .Site.BaseURL }}">
                         <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="200" class="white-logo">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="uk-width-1-2@m">
+                <div class="uk-width-1-3@m">
                     <div>
                         <h3 class="uk-h5 uk-white uk-text-uppercase">Insurances</h3>
                         <ul class="uk-list service__list">
@@ -40,6 +40,20 @@
                             <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
                             {{ end }}
                         </ul>                
+                    </div>
+                </div>
+                <div class="uk-width-expand@s">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
+                        <ul class="uk-list uk-white">
+                            <li><span class="uk-text-bold">Mon:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Tues:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Wed:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Thur:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Fri:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Sat:</span> <span>Appointments only</span></li>
+                            <li><span class="uk-text-bold">Sun:</span> <span>Closed</span></li>
+                        </ul>           
                     </div>
                 </div>
             </div>

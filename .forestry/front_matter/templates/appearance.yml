@@ -68,63 +68,10 @@ fields:
       max: 
       step: 
   label: Branding
-- name: colors
-  type: field_group
-  config: {}
-  fields:
-  - name: button_background_color
-    type: color
-    label: Button Background Color
-    config:
-      required: false
-      color_format: Hex
-  - name: button_text_color
-    type: color
-    config:
-      required: false
-      color_format: Hex
-    label: Button Text Color
-  - name: links
-    type: color
-    label: Links
-    config:
-      required: false
-      color_format: Hex
-  - name: accent
-    type: color
-    label: Accent
-    config:
-      required: false
-      color_format: Hex
-  label: Colors
-- name: pages
-  type: field_group
-  config: {}
-  fields:
-  - name: image
-    type: file
-    config:
-      maxSize: 2
-    label: Image
-  label: Pages
 - name: footer
   type: field_group
   config: {}
   fields:
-  - name: footer_background_color
-    type: color
-    label: Footer Background Color
-    config:
-      required: false
-      color_format: Hex
-  - name: background_image
-    type: file
-    config:
-      maxSize: 64
-    label: Background Image
-  - name: enable_black_text
-    type: boolean
-    label: Enable Black Text
   - name: footer_bio
     type: textarea
     default: ''
@@ -143,15 +90,6 @@ fields:
       schema:
         format: markdown
     label: Disclaimer
-  - name: equal_housing_logo
-    type: boolean
-    label: Show Equal Housing Logo
-  - name: mls_logo
-    type: boolean
-    label: Show MLS logo
-  - name: realtor_logo
-    type: boolean
-    label: Show REALTOR logo
   - name: important_documents
     type: field_group_list
     fields:
@@ -173,57 +111,5 @@ fields:
     description: Upload important documents and policies that will display in the
       footer of the website.
   label: Footer
-- name: sidebar
-  type: field_group
-  config: {}
-  fields:
-  - name: sidebar
-    type: blocks
-    template_types:
-    - side-blog-category
-    - latest-posts
-    - sidebar-listings
-    config:
-      min: 
-      max: 
-    label: Sidebar
-  - name: single_property_sidebar
-    type: boolean
-    label: Single Property Sidebar
-    default: true
-    hidden: true
-  label: Sidebar
-- name: search_field
-  type: field_group
-  config: {}
-  fields:
-  - name: disable_search
-    type: boolean
-    label: Disable Search
-  - name: search_by_state
-    type: boolean
-    label: Search by State
-  - name: search_by_cities
-    type: boolean
-    label: Search by Cities
-  - name: search_by_properties
-    type: boolean
-    label: Search by Properties
-  - name: filter_animation
-    type: select
-    default: slide
-    config:
-      required: false
-      options:
-      - slide
-      - fade
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: Filter Animation
-  label: Search Field
-  description: This modifies the search filter on the non IDX listing page.<br><em>www.yourwebsite.com/listings</em>
 pages:
 - data/appearance.yml

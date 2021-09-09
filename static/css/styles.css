@@ -28,6 +28,15 @@ body {
     line-height: 27px;
 }
 
+.main__content a {
+    color: #aa0817;
+    text-decoration: underline;
+}
+
+.main__content a:hover {
+    color: inherit;
+}
+
 ul.uk-breadcrumb>*>* {
     color: #fff;
 }

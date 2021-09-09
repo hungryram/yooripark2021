@@ -2,6 +2,25 @@
 label: Home Layout
 hide_body: true
 fields:
+- name: hero_image
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  label: Hero Image
 - name: featured_section
   type: field_group
   config: {}
@@ -28,11 +47,6 @@ fields:
       config:
         required: false
       label: Link
-    - name: image
-      type: file
-      config:
-        maxSize: 1
-      label: Image
     - name: svg
       type: textarea
       default: ''
@@ -48,5 +62,58 @@ fields:
       labelField: 
     label: Blocks
   label: Featured Section
+- name: introduction
+  type: field_group
+  config: {}
+  fields:
+  - name: subtitle
+    type: text
+    config:
+      required: false
+    label: Subtitle
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  label: Introduction
+- name: banner
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  label: Banner
+- name: service_list
+  type: field_group
+  config: {}
+  fields:
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: body
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Body
+  label: Service List
 pages:
 - data/home.yml

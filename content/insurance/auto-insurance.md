@@ -8,6 +8,9 @@ heading = "Work with RN Insurance for an affordable auto insurance and coverage 
 [menu.main]
 parent = "Insurance Plans"
 weight = 1
+[search_engine_optimization]
+meta_description = "RN Insurance agency offers affordable auto insurance policies for new and experienced drivers in Lowell, MA. Learn more by contacting our office."
+title_tag = "Rn Insurance: Affordable Auto Insurance in Lowell, MA"
 [[faq]]
 answer = "Every state has different coverage requirements but, in most states, drivers must carry:\n\n* Liability coverage — covers someone else’s property in the event of an at-fault accident, or\n* No-fault coverage — covers you and your passengers for medical and other related expenses caused by injuries from a car accident, regardless of fault, or\n* Both liability and no-fault coverage\n\nIn some states where coverage isn’t required, drivers, by law, must be able to pay for losses cause to others. Getting proper insurance coverage in the simplest way a person can comply."
 question = "What do I need to get my car on the road?"

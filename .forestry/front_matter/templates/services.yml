@@ -12,6 +12,11 @@ fields:
   config:
     maxSize: 2
   label: Image
+- name: image_alt_tag
+  type: text
+  config:
+    required: false
+  label: Image Alt Tag
 - name: heading
   type: text
   config:

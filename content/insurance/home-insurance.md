@@ -2,6 +2,6 @@
 title = "Home Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 5
+weight = 2
 
 +++

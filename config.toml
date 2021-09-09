@@ -1,14 +1,14 @@
 baseURL = "https://rn-insurance1.netlify.app/"
 disableKinds = ["taxonomy", "taxonomyTerm"]
-languageCode = "en-us"
 enableRobotsTXT = "true"
-[[menu.main]]
-name = "Resources"
-weight = 4
+languageCode = "en-us"
 [[menu.main]]
 name = "About"
 url = "/about"
 weight = 3
+[[menu.main]]
+name = "Resources"
+weight = 4
 [[menu.main]]
 name = "Home"
 url = "/"

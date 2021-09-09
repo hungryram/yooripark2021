@@ -3,6 +3,6 @@ svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" xml:space=\"preserve\" width=\"
 title = "Boat Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 2
+weight = 3
 
 +++

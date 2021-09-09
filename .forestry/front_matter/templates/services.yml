@@ -58,3 +58,8 @@ fields:
     max: 
     labelField: 
   label: FAQ
+- name: search_engine_optimization
+  type: include
+  config: {}
+  template: seo
+  label: Search Engine Optimization

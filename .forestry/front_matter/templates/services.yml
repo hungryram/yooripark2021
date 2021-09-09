@@ -45,9 +45,13 @@ fields:
       required: false
     label: Question
   - name: answer
-    type: text
+    type: textarea
+    default: ''
     config:
       required: false
+      wysiwyg: true
+      schema:
+        format: markdown
     label: Answer
   config:
     min: 

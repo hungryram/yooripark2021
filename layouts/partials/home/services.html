@@ -1,3 +1,4 @@
+{{ $optBlock := dict "display" "block" }}
 <div class="uk-section service__box">
     <div class="uk-container">
         <div class="uk-flex uk-flex-center">
@@ -9,9 +10,9 @@
             {{ range first 6 (where .Site.RegularPages "Type" "insurance") }}
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
+                    <div class="uk-card-body main__content">
                         <h3 class="uk-h4 uk-text-bold">{{ .Title }}</h3>
-                        <p>Our insurance advisors have years of experience in the insurance industry and serve as your advocate through the entire claim process.</p>
+                        {{ .Params.body | $.Page.RenderString $optBlock | truncate 200 }}
                         <div class="uk-margin-small-top">
                             <a href="{{ .Permalink }}" class="accent uk-text-bold">Learn More <span uk-icon="chevron-right"></span></a>
                         </div>

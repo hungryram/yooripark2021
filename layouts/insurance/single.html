@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $optBlock := dict "display" "block" }}
+
 <div class="uk-section single__service__page">
     <div class="uk-container">
         <div class="uk-grid-large" uk-grid>
@@ -11,7 +13,7 @@
             <div class="uk-width-1-2@s uk-flex uk-flex-middle">
                 <div class="uk-card main__content">
                     <h2>{{ .Params.heading }}</h2>
-                    {{ .Params.body | markdownify }}
+                    {{ .Params.body | .Page.RenderString $optBlock }}
                     <a href="/contact" class="uk-button uk-button-primary slide_right">Contact</a>
                 </div>
             </div>
@@ -42,7 +44,7 @@
                         <li>
                             <a class="uk-accordion-title uk-text-small uk-text-bold" href="#"><h3 style="font-size:1.2rem;">{{ .question }}</h3></a>
                             <div class="uk-accordion-content uk-margin-medium-left">
-                                {{ .answer | markdownify }}
+                                {{ .answer | $.Page.RenderString $optBlock }}
                             </div>
                         </li>
                         {{ end }}

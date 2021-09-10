@@ -1,12 +1,14 @@
 {{ define "main" }}
 {{ $footerContact := .Site.Data.profile.contact_information }}
+{{ $optBlock := dict "display" "block" }}
+
 <div class="uk-section">
     <div class="uk-container">
         <div class="uk-width-1-1 uk-text-center uk-margin-large-bottom">
             <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
                 <div class="uk-width-2xlarge">
-                    <h2>Visit the office</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laboriosam minus explicabo labore aut maxime maiores praesentium sapiente unde ipsa molestias dicta deleniti. Molestias, quod veniam vero tempore odit officiis!</p>
+                    <h2>{{ .Params.heading }}</h2>
+                    {{ .Params.body | $.Page.RenderString $optBlock }}
                 </div>
             </div>
         </div>

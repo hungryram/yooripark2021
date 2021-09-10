@@ -6,7 +6,7 @@ fields:
   type: text
   config:
     required: false
-  label: Heading
+  label: Title
 - name: body
   type: textarea
   default: ''

@@ -4,6 +4,6 @@ image_alt_tag = "Luxury condo building"
 title = "Condo Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 4
+weight = 5
 
 +++

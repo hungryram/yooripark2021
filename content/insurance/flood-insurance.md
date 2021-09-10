@@ -4,6 +4,6 @@ image_alt_tag = "Heavy rain on biker"
 title = "Flood Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 5
+weight = 6
 
 +++

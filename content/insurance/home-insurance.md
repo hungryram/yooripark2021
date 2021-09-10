@@ -4,6 +4,6 @@ image_alt_tag = "Husband and wife outside their new house"
 title = "Home Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 2
+weight = 3
 
 +++

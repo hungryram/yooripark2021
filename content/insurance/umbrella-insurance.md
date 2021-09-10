@@ -4,6 +4,6 @@ image_alt_tag = "gray and black car in a car accident"
 title = "Umbrella Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 9
+weight = 10
 
 +++

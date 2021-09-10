@@ -4,6 +4,6 @@ image_alt_tag = "Red motorcycle on a racing track"
 title = "Motorcycle Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 7
+weight = 8
 
 +++

@@ -4,6 +4,6 @@ image_alt_tag = "Daughter hugging her mom while doing yoga"
 title = "Life Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 6
+weight = 7
 
 +++

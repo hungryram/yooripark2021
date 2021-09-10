@@ -4,6 +4,6 @@ image_alt_tag = "Woman grabbing keys from a REALTOR"
 title = "Renters Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 8
+weight = 9
 
 +++

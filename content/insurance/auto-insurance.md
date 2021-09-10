@@ -8,7 +8,7 @@ title = "Auto Insurance"
 heading = "Work with RN Insurance for an affordable auto insurance and coverage you can afford"
 [menu.main]
 parent = "Insurance Plans"
-weight = 1
+weight = 2
 [search_engine_optimization]
 meta_description = "RN Insurance agency offers affordable auto insurance policies for new and experienced drivers in Lowell, MA. Learn more by contacting our office."
 title_tag = "Rn Insurance: Affordable Auto Insurance in Lowell, MA"

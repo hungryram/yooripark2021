@@ -4,6 +4,6 @@ image_alt_tag = "Business woman and man in a meeting"
 title = "Business Insurance"
 [menu.main]
 parent = "Insurance Plans"
-weight = 10
+weight = 11
 
 +++

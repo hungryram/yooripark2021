@@ -6,7 +6,7 @@
     <div class="uk-container">
         <div class="uk-grid">
             <div class="uk-width-3-5@s">
-                <h2>About RN Insurance</h2>
+                <h2>{{ .Params.heading }}</h2>
                 {{ .Params.body | .Page.RenderString $optBlock }}
                 <div class="uk-child-width-expand@m uk-grid-small uk-margin-medium-top" uk-grid>
                     <div>
@@ -36,7 +36,7 @@
     <div class="uk-container">
         <div class="uk-padding" style="background: #19202A">
             <div class="uk-flex uk-flex-center uk-text-center">
-                <div class="uk-width-2xlarge uk-white">
+                <div class="uk-width-2xlarge uk-white main__content">
                     <h2 class="uk-white" style="font-size:1.5rem">{{ .Params.banner.heading }}</h2>
                     {{ .Params.banner.body | $.Page.RenderString $optBlock }}
                 </div>
@@ -45,7 +45,7 @@
     </div>
 </div>
 <div class="uk-section">
-    <div class="uk-container">
+    <div class="uk-container main__content">
         <h2>Why Choose {{ .Site.Data.profile.company_name }}</h2>
         <hr>
         {{ .Content }}

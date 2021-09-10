@@ -2,34 +2,6 @@
 label: Appearance
 hide_body: true
 fields:
-- name: header
-  type: field_group
-  config: {}
-  fields:
-  - name: top_header_color
-    type: color
-    label: Top Header Color
-    config:
-      required: false
-      color_format: Hex
-  - name: header_background_color
-    type: color
-    label: Header Background Color
-    config:
-      required: false
-      color_format: Hex
-  - name: transparent_background
-    type: boolean
-    label: Enable Transparent Background
-  - name: enable_white_text
-    type: boolean
-    label: Enable White Text
-    description: Change navigation links to white
-  - name: enable_white_text_top
-    type: boolean
-    label: Enable White Text
-    description: Enables white text on top header bar
-  label: Header
 - name: branding
   type: field_group
   config: {}

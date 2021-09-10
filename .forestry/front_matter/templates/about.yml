@@ -50,3 +50,5 @@ fields:
     template: seo
     label: SEO
   label: Search Engine Optimization
+pages:
+- content/about/_index.md

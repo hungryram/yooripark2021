@@ -88,3 +88,20 @@ featured_section:
       1 0 0 0 0-.57l-1.89-7.11.67-2.88A12.88 12.88 0 0 0 50 47.41c.14-.1.27-.21.41-.31
       4.8 1.31 10.26 4.5 10.59 12.22a55.46 55.46 0 0 1-13.32 2.51z" data-name="Layer
       2"/></svg>
+hero_image:
+  heading: " Offering Reliable, Affordable Insurance Solutions"
+  body: RN Insurance is committed to providing the highest valued insurance plans
+    to individuals and families.
+introduction:
+  subtitle: RN Insurance
+  heading: A Premier Insurance Agency
+  body: |-
+    Our mission is to create an insurance plan that uniquely protects your insurance needs for an affordable price. We value the long term relationship with our clients. Priding ourselves to give families, individuals and businesses the personal attention required to protect what matters most to them.
+
+    When claims occur, we realize that it can be a difficult time and we will do everything possible to assure a prompt and thorough recovery.
+banner:
+  heading: Secure your future with RN Insurance. Offering you the best protection
+    for your unique situation at the right price
+service_list:
+  heading: The importance of insurance for everyday life
+  body: RN Insurance is dedicated to helping you find the right policy that you need.

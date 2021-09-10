@@ -1,6 +1,6 @@
 +++
-body = "View the list of services from our agency."
-title = "Insurance Plans"
+body = "View the list of insurance plans from our RN Insurance."
+title = "Our Insurance Plans"
 [menu.main]
 weight = 2
 [search_engine_optimization]

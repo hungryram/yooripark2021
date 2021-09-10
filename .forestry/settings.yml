@@ -41,14 +41,18 @@ sections:
   - services
   - heading-and-body
 - type: document
+  path: content/about/_index.md
+  label: About
+  match: "**/*"
+- type: document
+  path: content/contact/_index.md
+  label: Contact
+- type: document
   path: content/faq/_index.md
   label: FAQ
 - type: document
   path: content/testimonials/_index.md
   label: Testimonials
-- type: document
-  path: content/contact/_index.md
-  label: Contact
 - type: heading
   label: Legal
 - type: directory

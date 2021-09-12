@@ -1,6 +1,8 @@
 +++
 body = "This is the body"
-heading = "This is the heading"
+heading = "Randy Nong - Founder of RN Insurance"
+image = "https://res.cloudinary.com/hungryram19/image/upload/v1631415692/randy-nong/rn-insurance/randy-nong_xefjew.jpg"
+image_alt_tag = "Randy Nong with red tie"
 title = "About"
 [banner]
 body = ""

@@ -21,6 +21,16 @@ fields:
     schema:
       format: markdown
   label: Body
+- name: image
+  type: file
+  config:
+    maxSize: 64
+  label: Image
+- name: image_alt_tag
+  type: text
+  config:
+    required: false
+  label: Image Alt Tag
 - name: banner
   type: field_group
   config: {}

@@ -19,6 +19,7 @@ body .uk-heading-small,
 body .uk-heading-xlarge {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    line-height: 1.5;
 }
 
 body {
@@ -26,6 +27,11 @@ body {
     color: #777;
     font-size: 15px;
     line-height: 27px;
+}
+
+html body {
+    font-size: 16px;
+    color: #252525;
 }
 
 .main__content a {

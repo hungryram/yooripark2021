@@ -4,5 +4,4 @@ title = "Frequently Asked Questions"
 name = "FAQ"
 parent = "Resources"
 weight = 1
-
 +++

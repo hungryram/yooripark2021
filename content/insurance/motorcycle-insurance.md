@@ -9,5 +9,8 @@ heading = "Finding you the most affordable coverage you need for you and your bi
 [menu.main]
 parent = "Insurance Plans"
 weight = 8
+[[faq]]
+answer = "**Custom Parts and Equipment:** custom parts coverage will give you $3,000 in coverage without any additional cost to you. Coverage can range up to $10,000 in custom parts and equipment.\n\n**Roadside Assistance:** Roadside assistance can give you coverage up to $300 per breakdown\n\n**Liability Coverage:** You can pick the motorcycle insurance coverage that fits your needs. Most carriers offer underlying liability limits high enough to satisfy Personal Umbrella requirements, which means that you may be eligible for this additional coverage. In most states, Guest Passenger liability (mandatory on all street bikes) is automatically included at the same limit as your liability selection.\n\n**Medical Coverage:** This coverage provides for certain necessary medical expenses for you and any passenger in the event of an accident.\n\n**Uninsured/Underinsured Motorist Coverage:** This coverage typically pays for expenses associated with injury or death from an accident caused by an uninsured, underinsured, or hit-and-run driver. It also covers you if you are hit as a pedestrian."
+question = "What are the common coverage options for motorcycle?"
 
 +++

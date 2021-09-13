@@ -9,5 +9,8 @@ heading = "Get a quote on the right flood insurance plan and protect your invest
 [menu.main]
 parent = "Insurance Plans"
 weight = 6
+[[faq]]
+answer = "We offer flood insurance to our customers even though the government determines the flood coverage and premiums. Flood coverage gives you access to\n\n* 24/7 claims support and assistance\n* A dedicated representative who can help you understand your coverage\n\n**_FEMA summary of Coverage_**\n\nThe NFIP’s Dwelling form offers coverage for:\n\n* Building Property, up to $250,000\n* Personal Property up to $100,000\n\nIt is recommended by the NFIP that you purchase both types of coverage"
+question = "Do you offer Flood Insurance?"
 
 +++

@@ -4,11 +4,11 @@
 
 <div class="uk-section">
     <div class="uk-container">
-        <div class="uk-grid">
+        <div class="uk-grid uk-grid-large uk-flex-column-reverse@s">
             <div class="uk-width-3-5@s">
                 <h2>{{ .Params.heading }}</h2>
                 {{ .Params.body | .Page.RenderString $optBlock }}
-                <div class="uk-child-width-expand@m uk-grid-small uk-margin-medium-top" uk-grid>
+                <div class="uk-child-width-expand@m uk-grid-small uk-margin-medium-top uk-margin-medium-bottom" uk-grid>
                     <div>
                         <div class="uk-card">
                             <a href="https://www.google.com/maps/place/{{ $footerContact.address }} {{ $footerContact.city }} {{ $footerContact.state }} {{ $footerContact.zip_code }}" target="_blank" class="uk-link-text uk-text-bold"><span class="uk-margin-small-right uk-icon-button" uk-icon="location" style="background: #aa0817;color:#fff"></span> Visit the office</a>
@@ -26,8 +26,8 @@
                     </div>
                 </div>
             </div>
-            <div class="uk-width-expand@s">
-                <img src="{{ .Params.image }}" alt="">
+            <div class="uk-width-expand@s uk-text-center">
+                <img src="{{ .Params.image }}" alt="{{ .Params.image_alt_tag }}" width="400">
             </div>
         </div>
     </div>

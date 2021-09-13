@@ -9,5 +9,8 @@ heading = "Providing you the coverage you need for you and your assets."
 [menu.main]
 parent = "Insurance Plans"
 weight = 9
+[[faq]]
+answer = "Your renters' policy covers your personal property against theft or damage subject to the limits and deductibles you select. The coverage applies even when you are away from home.\n\nFor a small additional premium, you can choose to carry full value coverage on your personal property, which ensures that you will be paid the full replacement cost of items that are damaged or stolen without deduction for depreciation.\n\nYour renters' insurance policy also protects you and your family members against bodily injury and property damage liability claims and any litigation that may result subject to the limits you select.\n\nIn addition, you can select medical payments coverage which will pay for medical expenses incurred by a visitor who is injured at your residence regardless of fault. Various limits are available."
+question = "What does Renters Insurance cover?"
 
 +++

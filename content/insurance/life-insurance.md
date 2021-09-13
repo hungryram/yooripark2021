@@ -15,7 +15,5 @@ question = "What is Life Insurance?"
 [[faq]]
 answer = "There are several different types of life insurance, the most common 3 Life Insurance policies include the following:\n\n**_Term Life Insurance_**\n\nTerm life insurance provides protection for a specific amount of time, it can range from one year to 20 years depending on what you choose. Term life policies typically cost less than whole life insurance because term life policies have an expiration date. Term life policies sometimes have the option to convert to permanent coverage.\n\n**_Whole Life Insurance_**\n\nWhole life insurance is permanent, meaning if all the premiums are paid you will continue to be covered the entire lifetime. Whole life insurance is a great form of investment, as many whole life insurance policies also build cash value over time.\n\n**_Universal Life Insurance_**\n\nUniversal Life insurance is another form of permanent life insurance, but it differs due to its flexible premiums, face amount, and unbundled pricing structure. Universal life also can build cash value, which earns an interest rate that may adjust periodically, but usually is guaranteed to not fall below a certain percentage."
 question = "What are some common types of Life Insurance?"
-[[faq]]
-answer = ""
 
 +++

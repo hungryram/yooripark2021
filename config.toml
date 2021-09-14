@@ -1,4 +1,4 @@
-baseURL = "https://rn-insurance1.netlify.app/"
+baseURL = "https://www.rninsurance.com/"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 enableRobotsTXT = "true"
 languageCode = "en-us"

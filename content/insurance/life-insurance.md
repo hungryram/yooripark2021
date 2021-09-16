@@ -6,6 +6,9 @@ image_alt_tag = "Daughter hugging her mom while doing yoga"
 title = "Life Insurance"
 [banner]
 heading = "Enjoy life worry-free knowing your loved ones are protected for the future"
+[search_engine_optimization]
+meta_description = "Get protection for your familys future with the right life insurance coverage. Contact a professional at RN Insurance, Inc at 978-427-2544"
+title_tag = "Business Insurance - RN Insurance, Inc."
 [menu.main]
 parent = "Insurance Plans"
 weight = 7

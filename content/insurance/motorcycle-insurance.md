@@ -6,6 +6,9 @@ image_alt_tag = "Red motorcycle on a racing track"
 title = "Motorcycle Insurance"
 [banner]
 heading = "Finding you the most affordable coverage you need for you and your bike"
+[search_engine_optimization]
+meta_description = "Get the right coverage you need for your motorcycle so you're not overpaying. Call us at 978-427-2544 to save money."
+title_tag = "Rn Insurance: Affordable Condo Insurance"
 [menu.main]
 parent = "Insurance Plans"
 weight = 8

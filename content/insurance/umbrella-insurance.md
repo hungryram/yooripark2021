@@ -6,6 +6,9 @@ image_alt_tag = "gray and black car in a car accident"
 title = "Umbrella Insurance"
 [banner]
 heading = "Find out if an umbrella insurance policy is right for you"
+[search_engine_optimization]
+meta_description = "Get additional protection over an existing policy with umbrella insurance. Learn more by contacting us 978-427-2544"
+title_tag = "Umbrella Insurance - RN Insurance, Inc."
 [menu.main]
 parent = "Insurance Plans"
 weight = 10

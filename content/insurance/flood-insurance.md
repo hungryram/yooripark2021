@@ -6,6 +6,9 @@ image_alt_tag = "Heavy rain on biker"
 title = "Flood Insurance"
 [banner]
 heading = "Get a quote on the right flood insurance plan and protect your investments"
+[search_engine_optimization]
+meta_description = "Protect your home with flood insurance. Get a free insurance quote with RN Insurance, Inc. Call 978-427-2544"
+title_tag = "Flood Insurace in Lowell, MA - RN Insurance"
 [menu.main]
 parent = "Insurance Plans"
 weight = 6

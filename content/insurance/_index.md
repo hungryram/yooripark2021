@@ -6,7 +6,7 @@ name = "All Insurance Plans"
 parent = "Insurance Plans"
 weight = 1
 [search_engine_optimization]
-meta_description = ""
+meta_description = "Find the right policy for you. Need help? Contact RN Insurance, Inc to get a professional find affordable plans fit for you"
 title_tag = ""
 
 +++

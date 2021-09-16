@@ -6,6 +6,9 @@ image_alt_tag = "Husband and wife outside their new house"
 title = "Home Insurance"
 [banner]
 heading = "Lowell Home Insurance Done the Right Way"
+[search_engine_optimization]
+meta_description = "Protect your most valuable asset with affordable home insurance. Talk to a professional at RN Insurance to find the right coverage for you"
+title_tag = "Affordable Home Insurance - RN Insurance, Inc"
 [menu.main]
 parent = "Insurance Plans"
 weight = 3

@@ -6,8 +6,10 @@ image_alt_tag = "Business woman and man in a meeting"
 title = "Business Insurance"
 [banner]
 heading = "RN Insurance takes the time to evaluate your business needs"
+[search_engine_optimization]
+meta_description = "RN Insurance offers protection for your business. Learn more by contacting us 978-427-2544"
+title_tag = "Business Insurance - RN Insurance, Inc."
 [menu.main]
 parent = "Insurance Plans"
 weight = 11
-
 +++

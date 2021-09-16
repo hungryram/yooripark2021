@@ -7,6 +7,9 @@ svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" xml:space=\"preserve\" width=\"
 title = "Boat Insurance"
 [banner]
 heading = "We'll help you sail safely with the right boat insurance"
+[search_engine_optimization]
+meta_description = "Get protection for your boat and crew with affordable boat insurance. Talk to an agent at RN Insurance to get the coverage you need"
+title_tag = "Rn Insurance: Boat Insurance Policy"
 [menu.main]
 parent = "Insurance Plans"
 weight = 4

@@ -6,6 +6,9 @@ image_alt_tag = "Woman grabbing keys from a REALTOR"
 title = "Renters Insurance"
 [banner]
 heading = "Providing you the coverage you need for you and your assets."
+[search_engine_optimization]
+meta_description = "RN Insurance, Inc provides the best renters Insurance in Lowell, MA and surrounding areas. Contact RN Insurance at 978-427-2544 to talk to a professional."
+title_tag = "Rn Insurance: Affordable Condo Insurance"
 [menu.main]
 parent = "Insurance Plans"
 weight = 9

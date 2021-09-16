@@ -4,7 +4,13 @@
 {{- $favicon := .Site.Data.appearance.branding.favicon -}}
 {{- $fallBackDesc := .Params.body | truncate 170 -}}
 {{- $summary := .Summary | truncate 170 -}}
+<link rel="alternate" href="{{ .Permalink }}" hreflang="en-us" />
 <meta property="og:locale" content="en_US" />
+{{ if .Params.noindex }}
+<meta name="robots" content="noindex, nofollow" />
+{{ else }}
+<meta name="robots" content="index, follow" />
+{{ end }}
 {{- if $.IsHome -}}
 <!-- HOME PAGE SEO -->
 <title>{{ $seo.title_tag }}</title>

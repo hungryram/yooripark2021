@@ -2,13 +2,10 @@
 <div class="uk-position-top full-nav-wrapper" style="z-index: 1;">
     {{ partial "global/navbar" . }}
 </div>
-<main data-barba="container" data-barba-namespace="{{ .Title | lower }}">
+<main>
 {{ partial "home/hero" . }}
-{{ partial "home/features" . }}
 {{ partial "home/intro" . }}
 {{ partial "home/banner" . }}
-{{ partial "home/services" . }}
-
-{{ partial "home/faq" . }}
+{{ partial "home/add-ons" . }}
 </main>
 {{ partial "global/footer" . }}

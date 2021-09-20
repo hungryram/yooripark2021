@@ -2,15 +2,16 @@
 {{ $navColor := .Site.Data.appearance.header }}
 {{ $navContact := .Site.Data.profile.contact_information }}
 {{ $headerSocial := .Site.Data.profile.social_media }}
+{{ $social := .Site.Data.profile.social_media }}
 <style>
     nav.uk-navbar-sticky ul li a,
     .uk-navbar-sticky ul li a svg {
         color: #000!important;
     }
 </style>
-<div class="top-navbar">
-    <nav class="main-nav uk-navbar-container" style="background:#19202A">
-        <div class="uk-container">
+<div class="top-navbar" style="border-bottom: 1px solid #1e1e1e;">
+    <nav class="main-nav uk-navbar-container" style="background:transparent">
+        <div class="uk-container uk-container-expand">
             <div uk-navbar>
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav top-bar">
@@ -19,25 +20,28 @@
                     </ul>
                 </div>
                 <div class="uk-navbar-right">
-                        <a href="/contact" class="uk-button uk-button-primary">Get a Quote</a>
+                    <ul class="uk-navbar-nav">
+                        {{ if $social.facebook }}<li><a href="{{ $social.facebook }}" target="_blank" title="Facebook">Fb</a></li>{{ end }}
+                        {{ if $social.instagram }}<li><a href="{{ $social.instagram }}" target="_blank" title="Instagram">Ig</a></li>{{ end }}
+                        {{ if $social.pinterest }}<li><a href="{{ $social.pinterest }}" target="_blank" title="Pinterest">Pin</a></li>{{ end }}
+                        {{ if $social.twitter }}<li><a href="{{ $social.twitter }}" target="_blank" title="Twitter">Tw</a></li>{{ end }}
+                        {{ if $social.yelp }}<li><a href="{{ $social.yelp }}" target="_blank" title="Yelp">Yp</a></li>{{ end }}
+                    </ul>
                 </div>
 
             </div>
         </div>
     </nav>
 </div>
-<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; top: 200">
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200">
     <nav class="main-nav uk-navbar-container">
-        <div class="uk-container">
+        <div class="uk-container uk-container-expand">
             <div uk-navbar>
                 <div class="uk-navbar-left">
                     <a href="{{ .Site.BaseURL }}">
-                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }}" width="200" class="white-logo">
+                        <img src="/assets/logo.svg" alt="{{ .Site.Data.profile.company_name }}" width="80" class="white-logo">
                     </a>
-
-                </div>
-                <div class="uk-navbar-right">
-                    <ul class="uk-navbar-nav">
+                    <ul class="uk-navbar-nav" style="padding-left: 20px;">
                         {{ $currentPage := . }}
                         {{ range .Site.Menus.main }}
                         {{ if .HasChildren }}
@@ -56,6 +60,11 @@
                         {{ end }}
                         {{ end }}
                         </ul>
+                </div>
+                <div class="uk-navbar-right">
+                    <a href="" class="uk-button uk-button-secondary" style="border: 1px solid #c59d5f;color:">
+                        Book Now
+                    </a>
                 </div>
 
             </div>

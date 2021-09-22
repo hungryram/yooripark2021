@@ -18,7 +18,7 @@ body .uk-heading-medium,
 body .uk-heading-small, 
 body .uk-heading-xlarge {
     font-family: 'Cormorant', serif;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 body {
@@ -27,6 +27,10 @@ body {
     line-height: 29px;
     font-weight: 300;
     background: #000;
+}
+
+body em {
+    color: inherit;
 }
 
 html body {
@@ -40,7 +44,7 @@ html body {
 }
 
 .main__content a {
-    color: #aa0817;
+    color: #c59d5f;
     text-decoration: underline;
 }
 
@@ -74,6 +78,17 @@ form label {
     font-weight: 600;
 }
 
+form .uk-input, form .uk-select, form .uk-textarea {
+    background: transparent;
+    color: #fff;
+}
+
+form .uk-input::placeholder, 
+form .uk-select::placeholder, 
+form .uk-textarea::placeholder {
+    color: #fff;
+}
+
 h1.h1-title {
     color:#fff;
 }
@@ -97,7 +112,7 @@ a.uk-button-secondary:hover {
 }
 
 .accent {
-    color: #aa0817;
+    color: #c59d5f;
 }
 
 .uk-white {
@@ -106,7 +121,7 @@ a.uk-button-secondary:hover {
 
 button.uk-button-primary,
 a.uk-button-primary {
-    background: #aa0817;
+    background: #c59d5f;
     padding: 5px 40px;
     color: #FFF;
     display: inline-block;
@@ -120,7 +135,7 @@ a.uk-button-primary {
 
 body .uk-button-primary.uk-active, body .uk-button-primary:active,
 body .uk-button-primary:focus, body .uk-button-primary:hover {
-    background-color: #aa0817;
+    background-color: #c59d5f;
     color: #fff;
 }
 
@@ -138,7 +153,7 @@ body .uk-button-primary:focus, body .uk-button-primary:hover {
 @media screen and (min-width:800px) {
     div.page__banner .page__slider {
         content: '';
-        background: #aa0817;
+        background: #c59d5f;
         position: absolute;
         width: 45%;
         height: 100%;
@@ -163,6 +178,16 @@ div.page__banner__inner {
 
 /* NAVBAR */
 
+@media screen and (max-width: 768px) {
+    div.top-navbar {
+        display: none;
+    }
+}
+
+nav.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #000000;
+}
+
 div.top-navbar .uk-navbar-nav>li>a {
     min-height: 40px;
     text-transform: unset;
@@ -181,7 +206,7 @@ div.uk-navbar-dropdown ul li {
 }
 
 div.uk-navbar-dropdown ul li:hover {
-    background: #aa0817;
+    background: #c59d5f;
     transition: .3s;
     color: #fff;
 }
@@ -205,16 +230,13 @@ div.uk-navbar-dropdown ul li {
 } */
 
 ul.uk-navbar-nav>li>a:not(.top-navbar a) {
+    color: #ffffff;
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    transition: .1s;
-    color: #fff;
-}
-
-div ul.uk-navbar-nav>li>a:hover {
-    border-bottom: 3px solid #aa0817;
-    transition: .1s;
-    color: #aa0817;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 ul.uk-nav-parent-icon>.uk-parent>a::after {
@@ -245,11 +267,6 @@ div.hero-text p {
     font-size: 17.5px;
 }
 
-div.hero-text h1.uk-white {
-    letter-spacing: 5px;
-    font-size: 4rem;
-}
-
 @media screen and (max-width: 800px) {
     div.hero-text {
         padding: 20px;
@@ -264,70 +281,94 @@ div.hero-text h1.uk-white {
     }
 }
 
-
-/* NUMBER COUNTER */
-
-.number__counter p:nth-child(2) {
-    color: #a5a5a5;
+@media screen and (min-width:800px) {
+    div.hero-text h1.uk-white {
+        letter-spacing: 5px;
+        font-size: 4rem;
+    }
 }
 
-/* CONTACT */
 
-.contact__icons a {
+/* ABOUT PAGE */
+
+.about__page p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+/* SERVICE PAGE */
+
+@media screen and (min-width: 768px) {
+    div.service__single h1 {
+        font-size: 4rem;
+    }
+}
+
+div.service__single p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+div.service__single a:before {
+    content: '';
+    width: 5rem;
+    height: 3px;
+    background: #c59d5f;
     transition: .3s;
-    color: #222;
+    margin-left: 20px;
+    right: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
 }
 
-.contact__icons a:hover {
-    color: #aa0817;
+div.service__single a {
+    color: #c59d5f;
     transition: .3s;
+    font-size: 1.5rem;
 }
 
-/* SINGLE SERVICE PAGE */
-
-div.box-top {
+div.service__list h2:after {
+    content: '';
     position: absolute;
-    background: #aa0817;
-    width: 200px;
-    left: -50px;
-    z-index: -1;
-    bottom: 30px;
-    top: 30px;
+    width: 0px;
+    height: 3px;
+    background: #c59d5f;
+    top: 50%;
+    transition: .3s;
+    margin-left: 20px;
 }
 
-/* FAQ */
-
-div.uk-card-secondary {
-    background: #f3f3f3;
-    box-shadow: none;
+div.service__list h2:hover:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: #c59d5f;
+    top: 50%;
+    margin-left: 20px;
     transition: .3s;
 }
 
-div.uk-card-secondary.uk-card-hover:hover {
-    background: #f3f3f3;
-    color: inherit;
-    box-shadow: none;
+div.service__list a:hover {
+    text-decoration: none;
 }
 
-.faq__page .uk-card-body {
-    padding: 20px;
+div.service__list a:hover h2 {
+    transition: .3s;
+    color: #c59d5f!important;
 }
 
-.faq__page .uk-card-body h3 {
-    font-size: 1rem;
-    border-left: 4px solid #aa0817;
-    padding-left: 10px;
-}
-
-ul.service__list__faq li a:hover {
-    color: #aa0817;
+div.service__list h2 {
     transition: .3s;
 }
 
 /* FOOTER */
 
 footer.footer {
-    background: #0B0B0B;
+    background: url("https://res.cloudinary.com/hungryram19/image/upload/v1632243606/corinne-renteria/complete-muscle-therapy/dark-marble.jpg") no-repeat;
+    background-size: cover
 }
 
 footer.footer h6,
@@ -341,7 +382,7 @@ div.footer-credit ul li a {
 }
 
 .contact-detail span.uk-icon-button {
-    background: #aa0817;
+    background: #c59d5f;
 }
 
 .contact-detail svg {
@@ -352,9 +393,6 @@ div.footer-credit ul li a {
     color: #000;
 }
 
-.service__list {
-    columns: 2;
-}
 
 .footer-credit ul li {
     list-style: none;
@@ -365,6 +403,6 @@ footer.footer svg {
 }
 
 footer.footer svg:hover {
-    color: #aa0817;
+    color: #c59d5f;
     transition: .3s;
 }

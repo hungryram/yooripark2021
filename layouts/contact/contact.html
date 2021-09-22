@@ -7,78 +7,38 @@
         <div class="uk-width-1-1 uk-text-center uk-margin-large-bottom">
             <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
                 <div class="uk-width-2xlarge main__content">
-                    <h2>{{ .Params.heading }}</h2>
+                    <h1 class="uk-white" style="font-size:4rem;">{{ .Params.heading }}</h1>
                     {{ .Params.body | $.Page.RenderString $optBlock }}
                 </div>
             </div>
         </div>
-        <div class="uk-child-width-expand@s uk-text-center@s contact__icons uk-margin-medium-bottom" uk-grid>
+        <div class="uk-grid-large uk-flex uk-flex-center uk-text-center" uk-grid>
             <div>
-                <div class="uk-card">
-                    <a href="https://www.google.com/maps/place/{{ $footerContact.address }} {{ $footerContact.city }} {{ $footerContact.state }} {{ $footerContact.zip_code }}" target="_blank"><span class="uk-margin-small-right uk-icon-button" uk-icon="location" style="background: #aa0817;color:#fff"></span> {{ $footerContact.address }}, {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</a>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card">
-                    <a href="tel:{{ $footerContact.phone }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="receiver" style="background: #aa0817;color:#fff"></span>{{ $footerContact.phone }}</a>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card">
-                    <a href="mailto:{{ $footerContact.email }}"><span class="uk-margin-small-right uk-icon-button" uk-icon="mail" style="background: #aa0817;color:#fff"></span>{{ $footerContact.email }}</a>
-                </div>
-            </div>
-        </div>
-        <div class="uk-margin-large-bottom">
-            <hr>
-        </div>
-        <div class="uk-grid-large" uk-grid>
-            <div class="uk-width-1-2@s">
-                <div class="uk-card">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.2447498789907!2d-71.32865368453497!3d42.634971079169375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a464d36f32cf%3A0x945105aaa8ffaa63!2s296%20Westford%20St%2C%20Lowell%2C%20MA%2001851!5e0!3m2!1sen!2sus!4v1630795267947!5m2!1sen!2sus" height="450" style="border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="uk-width-1-2@s">
-                <div class="uk-card">
-                    <h3>Send an email</h3>
-                    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
-                        <input name="bot-field" type="hidden" />
-                        <input type="hidden" name="Subject" value="Website Contact Form">
-                        <div class="uk-width-1-2@s">
-                            <label for="uk-input-fname">First Name*</label>
-                            <input class="uk-input" type="text" name="First Name" id="uk-input-fname" required>
-                        </div>
-                        <div class="uk-width-1-2@s">
-                            <label for="uk-input-lname">Last Name*</label>
-                            <input class="uk-input" type="text" name="Last Name" id="uk-input-lname" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="input-phone">Phone*</label>
-                            <input class="uk-input" type="tel" name="Phone" id="input-phone" required>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="input-phone">Email*</label>
-                            <input class="uk-input" type="email" id="input-email" name="Email" required>
-                        </div>
-                        <div class="uk-width-1-1 insurance-drop">
-                            <label for="insurance-type">Inquiry Type* <em style="color:inherit">Choose multiple if needed</em></label>
-                            <select class="uk-select insurance-multiselect" name="insurance[]" id="insurance-type" multiple="multiple" required>
-                                {{ range where .Site.RegularPages "Type" "insurance" }}
-                                <option value="{{ .Title }}">{{ .Title }}</option>
-                                {{ end }}
-                            </select>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <label for="textarea-info">Your Message</label>
-                            <textarea class="uk-textarea" rows="5" id="textarea-info" name="Message"></textarea>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <button class="uk-button uk-button-primary uk-width-1-1">Submit</button>
-                        </div>
-                        <div class="uk-width-1-1">
-                            <p>By submitting the form with your information above you are agreeing to our <a style="color:#19202A" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a style="color:#19202A" href="/legal/privacy-policy">Privacy Policy</a></p>
-                        </div>
-                    </form>
+                <div class="uk-width-2xlarge">
+                    <div class="uk-card">
+                        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
+                            <input name="bot-field" type="hidden" />
+                            <input type="hidden" name="Subject" value="Website Contact Form">
+                            <div class="uk-width-1-2@s">
+                                <input class="uk-input" type="text" name="First Name" id="uk-input-fname" placeholder="First Name" required>
+                            </div>
+                            <div class="uk-width-1-2@s">
+                                <input class="uk-input" type="text" name="Last Name" id="uk-input-lname" placeholder="Last Name" required>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <input class="uk-input" type="email" id="input-email" name="Email" placeholder="Email" required>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <textarea class="uk-textarea" rows="5" id="textarea-info" placeholder="Your Message" name="Message"></textarea>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <button class="uk-button uk-button-primary uk-width-1-1">Submit</button>
+                            </div>
+                            <div class="uk-width-1-1">
+                                <p>By submitting the form with your information above you are agreeing to our <a style="color:#fff" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a style="color:#fff" href="/legal/privacy-policy">Privacy Policy</a></p>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

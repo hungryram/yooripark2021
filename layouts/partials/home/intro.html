@@ -1,37 +1,37 @@
 {{ $optBlock := dict "display" "block" }}
-
-<div class="uk-section">
-    <div class="uk-container uk-container-large">
-        <div class="uk-grid-large uk-flex uk-flex-middle" uk-grid>
-            <div class="uk-width-1-2@s uk-position-relative">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632120015/corinne-renteria/complete-muscle-therapy/stacked-rocks.jpg" alt="" width="400">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632117490/corinne-renteria/complete-muscle-therapy/slider-img-1.jpg" style="position:absolute;left:50%;" alt="" width="400" uk-parallax="y: 300; easing: -1.5">
-            </div>
-            <div class="uk-width-1-2@s">
-                <div class="uk-card">
-                    <h2 class="uk-margin-small-top uk-white uk-h1">{{ .Site.Data.home.introduction.heading }}</h2>
-                    {{ .Site.Data.home.introduction.body | $.Page.RenderString $optBlock }}
-                    <a href="/about" class="uk-button uk-button-secondary">Learn more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="uk-section uk-section-large">
+<div class="uk-section intro__first" style="padding-top:100px" uk-scrollspy="cls: uk-animation-slide-bottom-small; delay: 200;">
     <div class="uk-container uk-container-large">
         <div class="uk-grid-large uk-flex uk-flex-middle" uk-grid>
             <div class="uk-width-1-2@s">
                 <div class="uk-card">
-                    <h2 class="uk-margin-small-top uk-white uk-h1">{{ .Site.Data.home.introduction.heading }}</h2>
-                    {{ .Site.Data.home.introduction.body | $.Page.RenderString $optBlock }}
+                    <h2 class="uk-margin-small-top uk-white uk-h1">{{ .Site.Data.home.introduction.heading2 }}</h2>
+                    {{ .Site.Data.home.introduction.body2 | $.Page.RenderString $optBlock }}
                     <a href="/about" class="uk-button uk-button-secondary">Learn more</a>
                 </div>
             </div>
             <div class="uk-width-1-2@s uk-position-relative uk-text-right">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632120015/corinne-renteria/complete-muscle-therapy/stacked-rocks.jpg" alt="" width="400">
-                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632117490/corinne-renteria/complete-muscle-therapy/slider-img-1.jpg" style="position:absolute;right:20%;" alt="" width="400" uk-parallax="y: 300; easing: -1.5">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632241380/corinne-renteria/complete-muscle-therapy/shoulder-pain.jpg" alt="" width="400">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632117490/corinne-renteria/complete-muscle-therapy/slider-img-1.jpg" style="position:absolute;right:20%;top:50%" alt="" width="400" uk-parallax="y: -200; easing: 1">
             </div>
         </div>
     </div>
 </div>
+
+<div class="uk-section intro__second" style="padding-top:100px" uk-scrollspy="cls: uk-animation-slide-bottom-small; delay: 200;">
+    <div class="uk-container uk-container-large">
+        <div class="uk-grid-large uk-flex uk-flex-middle" uk-grid>
+            <div class="uk-width-1-2@s uk-position-relative">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632120015/corinne-renteria/complete-muscle-therapy/stacked-rocks.jpg" alt="" width="400">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1632117490/corinne-renteria/complete-muscle-therapy/slider-img-1.jpg" style="position:absolute;left:50%;top:50%;" alt="" width="400" uk-parallax="y: -200; easing: 1">
+            </div>
+            <div class="uk-width-1-2@s">
+                <div class="uk-card">
+                    <h2 class="uk-margin-small-top uk-white uk-h1">{{ .Site.Data.home.introduction.heading }}</h2>
+                    {{ .Site.Data.home.introduction.body | $.Page.RenderString $optBlock }}
+                    <a href="/about" class="uk-button uk-button-secondary uk-margin-medium-top">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

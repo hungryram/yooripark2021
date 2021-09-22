@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="uk-section service__single">
+    <div class="uk-container uk-text-center">
+        <h1 class="uk-white">{{ .Title }}</h1>
+    </div>
+</div>
+<div class="uk-section service__single uk-margin-large-bottom">
+    <div class="uk-container">
+        <div class="uk-grid uk-flex uk-flex-middle">
+            <div class="uk-width-expand@s">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Params.image_alt_tag }}">
+            </div>
+            <div class="uk-width-3-5@s">
+                {{ .Content }}
+                <div class="uk-margin-large-top">
+                    <a href="{{ .Site.Data.profile.booking_link }}" class="uk-link-text">Book now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

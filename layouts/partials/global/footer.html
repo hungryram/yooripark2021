@@ -1,14 +1,14 @@
 {{ $footerSocial := .Site.Data.profile.social_media }}
 {{ $contact := .Site.Data.profile.contact_information }}
-
+{{ if in .Permalink "/contact" }}
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.2447498789907!2d-71.32865368453497!3d42.634971079169375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a464d36f32cf%3A0x945105aaa8ffaa63!2s296%20Westford%20St%2C%20Lowell%2C%20MA%2001851!5e0!3m2!1sen!2sus!4v1630795267947!5m2!1sen!2sus" height="450" style="filter: invert(90%);border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe>
+{{ end }}
 <footer class="footer">
     <div class="uk-section">
-        <div class="uk-container uk-container-">
-            <div class="uk-grid-match uk-grid-medium uk-text-left" uk-grid>
-                <div class="footer-text uk-width-1-4@m">
-                    <a href="{{ .Site.BaseURL }}">
-                        <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }} logo" width="200" class="white-logo">
-                    </a>
+        <div class="uk-container uk-container-large">
+            <div class="uk-grid-match uk-grid-large uk-text-left" uk-grid>
+                <div class="footer-text uk-width-1-3@s">
+                    <h3 class="uk-h3 uk-white uk-text-uppercase">About</h3>
                     <p class="uk-white">{{ .Site.Data.appearance.footer.footer_bio }}</p>
                     <div class="accent">
                         {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-margin-small-right" uk-icon="icon: facebook; ratio: 1"></a>{{ end }}
@@ -20,9 +20,9 @@
                         {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-margin-small-right" uk-icon="icon: yelp; ratio: 1"></a>{{ end }}
                     </div>
                 </div>
-                <div class="uk-width-1-4@m">
+                <div class="uk-width-1-3@s">
                     <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Contact Information</h3>
+                        <h3 class="uk-h3 uk-white uk-text-uppercase">Contact Information</h3>
                         <ul class="uk-list">
                             <li><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></li>
                             <li><a href="tel:{{ $contact.phone }}"><strong>Office: </strong>{{ $contact.phone }}</a></li>
@@ -31,32 +31,17 @@
                         </ul>           
                     </div>
                 </div>
-                <div class="uk-width-expand@s">
+                <div class="uk-width-1-3@s">
                     <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
+                        <h3 class="uk-h3 uk-white uk-text-uppercase">Office Hours</h3>
+                        <p>Office is scheduled for weekends only</p>
                         <ul class="uk-list uk-white">
-                            <li><span class="uk-text-bold">Mon:</span> <span>9am-5pm</span></li>
-                            <li><span class="uk-text-bold">Tues:</span> <span>9am-5pm</span></li>
-                            <li><span class="uk-text-bold">Wed:</span> <span>9am-5pm</span></li>
-                            <li><span class="uk-text-bold">Thur:</span> <span>9am-5pm</span></li>
-                            <li><span class="uk-text-bold">Fri:</span> <span>9am-5pm</span></li>
+                            <li><span class="uk-text-bold">Fri:</span> <span>Appointments only</span></li>
                             <li><span class="uk-text-bold">Sat:</span> <span>Appointments only</span></li>
-                            <li><span class="uk-text-bold">Sun:</span> <span>Closed</span></li>
+                            <li><span class="uk-text-bold">Sun:</span> <span>Appointments only</span></li>
                         </ul>           
                     </div>
                 </div>
-
-                <div class="uk-width-1-3@m">
-                    <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Insurance Plans</h3>
-                        <ul class="uk-list service__list">
-                            {{ range where .Site.RegularPages "Type" "insurance" }}
-                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-                            {{ end }}
-                        </ul>                
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -78,33 +63,5 @@
         </div>
     </div>
 </footer>
-
-<script>
-    (function(d){
-       var s = d.createElement("script");
-       /* uncomment the following line to override default position*/
-        s.setAttribute("data-position", 3);
-       /* uncomment the following line to override default size (values: small, large)*/
-       /* s.setAttribute("data-size", "large");*/
-       /* uncomment the following line to override default language (e.g., fr, de, es, he, nl, etc.)*/
-       /* s.setAttribute("data-language", "null");*/
-       /* uncomment the following line to override color set via widget (e.g., #053f67)*/
-       /* s.setAttribute("data-color", "#2d68ff");*/
-       /* uncomment the following line to override type set via widget (1=person, 2=chair, 3=eye, 4=text)*/
-       /* s.setAttribute("data-type", "1");*/
-       /* s.setAttribute("data-statement_text:", "Our Accessibility Statement");*/
-       /* s.setAttribute("data-statement_url", "http://www.example.com/accessibility";*/
-       /* uncomment the following line to override support on mobile devices*/
-       /* s.setAttribute("data-mobile", true);*/
-       /* uncomment the following line to set custom trigger action for accessibility menu*/
-       /* s.setAttribute("data-trigger", "triggerId")*/
-       s.setAttribute("data-account", "6B19qmFiEJ");
-       s.setAttribute("src", "https://cdn.userway.org/widget.js");
-       (d.body || d.head).appendChild(s);})(document)
-</script>
-<noscript>
-Please ensure Javascript is enabled for purposes of 
-<a href="https://userway.org">website accessibility</a>
-</noscript>
 </body>
 </html>

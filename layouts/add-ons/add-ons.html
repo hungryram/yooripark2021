@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="uk-section">
+    <div class="uk-container uk-text-center">
+        <h2 class="uk-white uk-text-center">Complete Muscle Therapy provides an array of options to enhance your massage</h2>
+        <p>Experience a customized massage that will leave you feeling revived. Incorporate some of my add-ons to elevate your senses.</p>
+    </div>
+    <div class="uk-flex uk-flex-center uk-margin-large-top">
+        <div class="uk-width-large">
+            {{ range .Params.add_ons }}
+            <div class="uk-grid-small" uk-grid>
+                <div class="uk-width-expand" uk-leader>{{ .name }}</div>
+                <div>{{ .price }}</div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

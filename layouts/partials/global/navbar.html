@@ -3,12 +3,7 @@
 {{ $navContact := .Site.Data.profile.contact_information }}
 {{ $headerSocial := .Site.Data.profile.social_media }}
 {{ $social := .Site.Data.profile.social_media }}
-<style>
-    nav.uk-navbar-sticky ul li a,
-    .uk-navbar-sticky ul li a svg {
-        color: #000!important;
-    }
-</style>
+
 <div class="top-navbar" style="border-bottom: 1px solid #1e1e1e;">
     <nav class="main-nav uk-navbar-container" style="background:transparent">
         <div class="uk-container uk-container-expand">
@@ -33,7 +28,7 @@
         </div>
     </nav>
 </div>
-<div class="uk-visible@s" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 200">
+<div class="uk-visible@s" uk-sticky="animation: uk-animation-fade; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 300">
     <nav class="main-nav uk-navbar-container">
         <div class="uk-container uk-container-expand">
             <div uk-navbar>
@@ -78,7 +73,7 @@
     <nav class="uk-navbar uk-navbar-container uk-hidden@s uk-box-shadow-small" style="padding: 0 15px;">
         <div class="uk-navbar-left">
             <a href="{{ .Site.BaseURL }}">
-                <img src="{{ .Site.Data.appearance.branding.logo }}" alt="{{ .Site.Data.profile.company_name }}" width="140">
+                <img src="/assets/logo.svg" alt="{{ .Site.Data.profile.company_name }}" width="60">
             </a>
         </div>
         <div class="uk-navbar-right">

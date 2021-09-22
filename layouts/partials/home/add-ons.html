@@ -8,15 +8,19 @@
             </div>
             <div class="uk-width-1-2@s">
                 <div class="uk-card">
-                    <h2 class="uk-margin-small-top uk-white uk-h1">Our add-ons</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore eum praesentium officia. Consectetur, ea recusandae error rerum obcaecati tenetur modi dolore maiores quo odit at doloribus similique quaerat sit libero!</p>
+                    <h2 class="uk-margin-small-top uk-white uk-h1">{{ .Site.Data.home.add_ons.heading }}</h2>
+                    <p>{{ .Site.Data.home.add_ons.body }}</p>
                     <ul class="uk-list">
-                        <li>Hot Stone Treatment $69</li>
-                        <li>Hot Stone Treatment $69</li>
-                        <li>Hot Stone Treatment $69</li>
-                        <li>Hot Stone Treatment $69</li>
+                        {{ range where .Site.Pages "Type" "add-ons" }}
+                        {{ range .Params.add_ons }}
+                        <div class="uk-grid-small" uk-grid>
+                            <div class="uk-width-expand" uk-leader>{{ .name }}</div>
+                            <div>{{ .price }}</div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
                     </ul>
-                    <a href="/about" class="uk-button uk-button-secondary">Learn more</a>
+                    <a href="/about" class="uk-button uk-button-secondary uk-margin-medium-top">View more</a>
                 </div>
             </div>
         </div>

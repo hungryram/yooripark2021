@@ -1,17 +1,38 @@
 +++
-body = "RN Insurance, Inc. is located in Lowell, MA. Founded by Randy Nong, RN Insurance started as a passion to help people by providing the best customer service and dependability. The drive to help people save money without overpaying for insurance led Randy to start RN Insurance, Inc.\n\nAs your licensed insurance broker, we are dedicated to helping you find the right coverage for your insurance needs. Whether you are looking for auto, homeowners, or life insurance, RN Insurance, Inc is committed to delivering you the best-customized insurance at an affordable price. So you only pay for what you need.\n\nAt RN Insurance, Inc. we go out of our way to treat everyone and share industry knowledge to ensure you and your loved ones are fully protected. We are excited to assist with your insurance needs. If you have any questions, please don't hesitate to contact our office."
-heading = "Randy Nong - Founder of RN Insurance"
-image = "https://res.cloudinary.com/hungryram19/image/upload/v1631415692/randy-nong/rn-insurance/randy-nong_xefjew.jpg"
-image_alt_tag = "Randy Nong with red tie"
-title = "About"
-[banner]
-body = "Providing the best knowledge and experience to help you understand your coverage options."
-heading = "Helping customers identify the right insurance coverage that best fits your needs."
-[search_engine_optimization]
+Title = "About"
+about_subtitle = "My About Subtitle"
+about_title = "About Complete Muscle Therapy"
 meta_description = ""
-title_tag = ""
+meta_title = ""
+[about_footer]
+about_button_label = "Book Now"
+about_button_link = "/bookings"
+about_footer_body = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendist, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
+about_footer_subtitle = "Let's Connect"
+about_footer_title = "Schedule an Appointment"
+[columns.column_four]
+body_text_four = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendist, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
+column_four_title = "testing rou"
+[columns.column_one]
+body_text_one = "ectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendisLorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
+column_one_title = "test column"
+[columns.column_three]
+body_text_three = "t, consecteturt, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reit, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
+column_three_title = "t, consectetur adipisicing elit. "
+[columns.column_two]
+body_text_two = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
+column_two_title = "lorem test"
 
 +++
-RN Insurance, Inc. is a growing insurance agency located in Lowell, MA. We service all of Massachusetts and New Hampshire helping people find affordable coverages. Whether you're a new driver or an experienced one, or a newlywed who is looking to purchase their first home, you can count on RN Insurance to help you find the most competitive prices. Finding the right insurance without a licensed professional can be intimidating, we are happy to educate you on the process and break down what coverages you may need so you're not overpaying.
+**Hi I’m Corinne!**
 
-We work every day to ensure you and your loved ones are protected from unexpected accidents and losses. Ready to get in touch with a professional? Visit our office or give us a [call](tel:978-427-2544)
+I aim to create a safe environment while tailoring you’re session to your specific needs. I am a Neuromuscular Massage Therapist which means I re-educate your muscles to it’s natural resting point. It’s what I like to call the “Real Work” not the “Fake/Fluffy Work”.  
+I also offer other modalities such as Swedish, Deep Tissue, Trigger Point, Myofascial Techniques, Sports Massage, etc.
+
+​
+
+Here is a little more about me...
+
+​
+
+I am a graduate from the 900 hour program at National Holistic Institute. I am educated in both Western and Eastern modalities. During my education at National Holistic Institute, I was required to work in the teaching clinic which gave me the experience of working on the public as well as reception desk responsibilities which included customer service, cashier, record keeping, appointment scheduling, and problem solving. Some of my experience was developed during my externship at Hand and Stone Spa and Facial. At Hand and Stone, I would perform massages and complete the responsibilities of a massage therapist which included laundry and turning rooms. While I was still in training, I volunteered as a Massage Therapist to do the 2017 Disneyland Half Marathon Race in Anaheim. Volunteering at this event gave me the experience of performing Sports Massage on participating athletes. After graduating from the 900 hour program at NHI, I knew there had to be more to learn in order to relieve the body from pain. That is when I decided to take the 450 hour Advanced Neuromuscular Massage Therapy Program at NHI. During This program I studied what I like to call the "Real Work" rather than the "Fluffy Work". Currently, I am a Professional Dancer, Dance Teacher, and Choreographer. I am also studying for my Personal Training certificate while helping  relieve my client's pain through Massage Therapy. Because of my training at National Holistic Institute, I am proud to be a Professional Massage Therapist and Health Educator. I believe that the body needs assistance in healing whether it’s through body rehabilitation or simple relaxation. I look forward to working with you and can’t wait to help you with wellness journey!

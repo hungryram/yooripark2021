@@ -2,7 +2,7 @@
 {{ $footerContact := .Site.Data.profile.contact_information }}
 {{ $optBlock := dict "display" "block" }}
 
-<div class="uk-section">
+<div class="uk-section" uk-scrollspy="cls: uk-animation-fade; delay: 300;">
     <div class="uk-container">
         <div class="uk-width-1-1 uk-text-center uk-margin-large-bottom">
             <div class="uk-flex uk-flex-center uk-margin-medium-bottom">
@@ -12,33 +12,31 @@
                 </div>
             </div>
         </div>
-        <div class="uk-grid-large uk-flex uk-flex-center uk-text-center" uk-grid>
-            <div>
-                <div class="uk-width-2xlarge">
-                    <div class="uk-card">
-                        <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
-                            <input name="bot-field" type="hidden" />
-                            <input type="hidden" name="Subject" value="Website Contact Form">
-                            <div class="uk-width-1-2@s">
-                                <input class="uk-input" type="text" name="First Name" id="uk-input-fname" placeholder="First Name" required>
-                            </div>
-                            <div class="uk-width-1-2@s">
-                                <input class="uk-input" type="text" name="Last Name" id="uk-input-lname" placeholder="Last Name" required>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <input class="uk-input" type="email" id="input-email" name="Email" placeholder="Email" required>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <textarea class="uk-textarea" rows="5" id="textarea-info" placeholder="Your Message" name="Message"></textarea>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <button class="uk-button uk-button-primary uk-width-1-1">Submit</button>
-                            </div>
-                            <div class="uk-width-1-1">
-                                <p>By submitting the form with your information above you are agreeing to our <a style="color:#fff" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a style="color:#fff" href="/legal/privacy-policy">Privacy Policy</a></p>
-                            </div>
-                        </form>
-                    </div>
+        <div class="uk-flex uk-flex-center uk-text-center">
+            <div class="uk-width-2xlarge">
+                <div class="uk-card">
+                    <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="uk-grid-small" uk-grid action="/thank-you">
+                        <input name="bot-field" type="hidden" />
+                        <input type="hidden" name="Subject" value="Website Contact Form">
+                        <div class="uk-width-1-2@s">
+                            <input class="uk-input" type="text" name="First Name" id="uk-input-fname" placeholder="First Name" required>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <input class="uk-input" type="text" name="Last Name" id="uk-input-lname" placeholder="Last Name" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <input class="uk-input" type="email" id="input-email" name="Email" placeholder="Email" required>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <textarea class="uk-textarea" rows="5" id="textarea-info" placeholder="Your Message" name="Message"></textarea>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <button class="uk-button uk-button-primary uk-width-1-1">Submit</button>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <p>By submitting the form with your information above you are agreeing to our <a style="color:#fff" href="/legal/terms-and-conditions">Terms and Conditions</a> and <a style="color:#fff" href="/legal/privacy-policy">Privacy Policy</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

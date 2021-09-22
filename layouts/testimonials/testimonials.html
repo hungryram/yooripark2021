@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="uk-section">
+    <div class="uk-container">
+        <h1 class="uk-white">My Testimonials</h1>
+        <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
+            {{ range .Params.reviews }}
+            <div>
+                <div class="uk-card uk-card-body">
+                        <p class="uk-h3 uk-white uk-margin-remove">{{ .review }}</p>
+                        <p>&#8212; {{ .title }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

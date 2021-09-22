@@ -14,3 +14,7 @@ weight = 5
 name = "Home"
 url = "/"
 weight = 1
+[[menu.main]]
+name = "Testimonials"
+url = "/testimonials"
+weight = 4

@@ -21,6 +21,15 @@ body .uk-heading-xlarge {
     line-height: 1.2;
 }
 
+.md__content h1,
+.md__content h2,
+.md__content h3,
+.md__content h4,
+.md__content h5,
+.md__content h6 {
+    color: inherit;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     color: #fff;
@@ -41,6 +50,11 @@ html body {
     div.uk-grid-column-large>*, div.uk-grid-large>* {
         padding-left: 165px;
     }
+}
+
+div.uk-container {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .main__content a {
@@ -81,6 +95,8 @@ form label {
 form .uk-input, form .uk-select, form .uk-textarea {
     background: transparent;
     color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 25px;
 }
 
 form .uk-input::placeholder, 
@@ -113,6 +129,13 @@ a.uk-button-secondary:hover {
 
 .accent {
     color: #c59d5f;
+    transition: .3s;
+}
+
+.accent:hover {
+    color: inherit;
+    text-decoration: none;
+    transition: .3s;
 }
 
 .uk-white {
@@ -254,7 +277,7 @@ ul.uk-nav-parent-icon>.uk-parent>a::after {
 }
 
 div.uk-modal-dialog {
-    background: #19202A;
+    background: #000;
 }
 
 /* HERO */
@@ -285,6 +308,15 @@ div.hero-text p {
     div.hero-text h1.uk-white {
         letter-spacing: 5px;
         font-size: 4rem;
+    }
+}
+
+/* INTRO */
+
+@media screen and (max-width: 768px) {
+    img.image1,
+    img.image2 {
+        display: none;
     }
 }
 

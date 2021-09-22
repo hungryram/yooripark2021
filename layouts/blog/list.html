@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="uk-section uk-section-large">
+    <div class="uk-container">
+        <h1 class="uk-light">My blog</h1>
+        <div class="uk-child-width-1-1@m" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card; delay: 400;">
+            {{ range .Pages }}
+            <div>
+                <div class="uk-card uk-card-body">
+                        <h2 class="uk-white">&#8212; {{ .Title }}</h2>
+                        <p>{{ .Summary }} ...</p>
+                        <a href="{{ .Permalink }}" class="accent"><span uk-icon="icon:arrow-right"></span>  Read more</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}

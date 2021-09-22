@@ -128,7 +128,7 @@ a.uk-button-secondary:hover {
 }
 
 .accent {
-    color: #c59d5f;
+    color: #c59d5f!important;
     transition: .3s;
 }
 

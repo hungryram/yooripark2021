@@ -4,8 +4,7 @@
 {{ $headerSocial := .Site.Data.profile.social_media }}
 {{ $social := .Site.Data.profile.social_media }}
 
-<div class="nav-wrapper{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" >
-    <div class="top-navbar" style="border-bottom: 1px solid #1e1e1e;">
+    <div class="top-navbar{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" style="border-bottom: 1px solid #1e1e1e;">
         <nav class="main-nav uk-navbar-container" style="background:transparent">
             <div class="uk-container uk-container-expand">
                 <div uk-navbar>
@@ -17,8 +16,8 @@
                     </div>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav">
-                            {{ if $social.facebook }}<li><a href="{{ $social.facebook }}" target="_blank" title="Facebook">Fb</a></li>{{ end }}
-                            {{ if $social.instagram }}<li><a href="{{ $social.instagram }}" target="_blank" title="Instagram">Ig</a></li>{{ end }}
+                            {{ if $social.facebook }}<li><a href="{{ $social.facebook }}" target="_blank" title="Facebook">Facebook</a></li>{{ end }}
+                            {{ if $social.instagram }}<li><a href="{{ $social.instagram }}" target="_blank" title="Instagram">Instagram</a></li>{{ end }}
                             {{ if $social.pinterest }}<li><a href="{{ $social.pinterest }}" target="_blank" title="Pinterest">Pin</a></li>{{ end }}
                             {{ if $social.twitter }}<li><a href="{{ $social.twitter }}" target="_blank" title="Twitter">Tw</a></li>{{ end }}
                             {{ if $social.yelp }}<li><a href="{{ $social.yelp }}" target="_blank" title="Yelp">Yp</a></li>{{ end }}
@@ -29,7 +28,7 @@
             </div>
         </nav>
     </div>
-    <div class="uk-visible@s" uk-sticky="animation: uk-animation-fade; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 300">
+    <div class="uk-visible@s{{ if $.IsHome }} uk-animation-slide-top-small{{ end }}" uk-sticky="animation: uk-animation-fade; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky uk-dark; cls-inactive: uk-navbar-transparent; top: 300">
         <nav class="main-nav uk-navbar-container">
             <div class="uk-container uk-container-expand">
                 <div uk-navbar>
@@ -67,7 +66,6 @@
             </div>
         </nav>
     </div>
-</div>
 
 
 <!-- mobile -->

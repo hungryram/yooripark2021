@@ -2,9 +2,9 @@
 {{ $footerContact := .Site.Data.profile.contact_information }}
 {{ $optBlock := dict "display" "block" }}
 
-<div class="uk-section service__single" uk-scrollspy="cls: uk-animation-fade; delay: 300;">
+<div class="uk-section uk-section-large service__single" uk-scrollspy="cls: uk-animation-fade; delay: 300;">
     <div class="uk-container main__content">
-        <h1 class="uk-white">Why Choose {{ .Site.Data.profile.company_name }}</h1>
+        <h1 class="uk-light">Why Choose {{ .Site.Data.profile.company_name }}</h1>
         <br>
         {{ .Content }}
         <div class="uk-margin-large-top">

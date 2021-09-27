@@ -23,7 +23,7 @@
                 <ul class="uk-list">
                     {{ $city := slice }}
                     {{ range .Pages }}
-                      {{ $city = $city | append .Params.cities }}
+                      {{ $city = $city | append $.Params.cities }}
                     {{ end }}
                     {{ range ($city | uniq) }}
                     <li uk-filter-control="filter: [data-city='{{ . }}']; group: data-cities" onclick="document.getElementById('search-cities').innerHTML='{{ . }}'; showSelected();getLength();">{{ . }}</li>
@@ -38,7 +38,7 @@
                 <ul class="uk-list">
                     {{ $prop := slice }}
                     {{ range .Pages }}
-                      {{ $prop = $prop | append .Params.properties }}
+                      {{ $prop = $prop | append $.Params.properties }}
                     {{ end }}
                     {{ range ($prop | uniq) }}
                     <li uk-filter-control="filter: [data-properties='{{ . }}']; group: data-properties" onclick="document.getElementById('search-properties').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
@@ -72,7 +72,7 @@
             <ul class="uk-list">
                 {{ $city := slice }}
                 {{ range .Pages }}
-                  {{ $city = $city | append .Params.cities }}
+                  {{ $city = $city | append $.Params.cities }}
                 {{ end }}
                 {{ range ($city | uniq) }}
                 <li uk-filter-control="filter: [data-city='{{ . }}']; group: data-cities" onclick="document.getElementById('search-cities').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
@@ -89,7 +89,7 @@
             <ul class="uk-list">
                 {{ $prop := slice }}
                 {{ range .Pages }}
-                  {{ $prop = $prop | append .Params.properties }}
+                  {{ $prop = $prop | append $.Params.properties }}
                 {{ end }}
                 {{ range ($prop | uniq) }}
                 <li uk-filter-control="filter: [data-properties='{{ . }}']; group: data-properties" onclick="document.getElementById('search-properties').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>

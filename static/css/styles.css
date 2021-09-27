@@ -424,6 +424,14 @@ div.footer-credit ul li a {
 
 /* SEARCH */
 
+@media screen and (max-width: 768px) {
+    .max-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
 #top-search {
     padding: 20px;
 }

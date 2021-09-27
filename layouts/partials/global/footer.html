@@ -9,13 +9,13 @@
                 <div class="footer-text uk-width-1-4@s">
                     <div class="accent">
                         <h3 class="uk-h5 uk-white uk-text-uppercase">Follow me</h3>
-                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-margin-small-right" uk-icon="icon: facebook; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-margin-small-right" uk-icon="icon: instagram; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-margin-small-right" uk-icon="icon: linkedin; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-margin-small-right" uk-icon="icon: pinterest; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-margin-small-right" uk-icon="icon: twitter; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-margin-small-right" uk-icon="icon: youtube; ratio: 1"></a>{{ end }}
-                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-margin-small-right" uk-icon="icon: yelp; ratio: 1"></a>{{ end }}
+                        {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-display-block">Facebook</a>{{ end }}
+                        {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-display-block">Instagram</a>{{ end }}
+                        {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-display-block">Linkedin</a>{{ end }}
+                        {{ if $footerSocial.pinterest }}<a href="{{ $footerSocial.pinterest }}" class="uk-display-block">Pinterest</a>{{ end }}
+                        {{ if $footerSocial.twitter }}<a href="{{ $footerSocial.twitter }}" class="uk-display-block">Twitter</a>{{ end }}
+                        {{ if $footerSocial.youtube }}<a href="{{ $footerSocial.youtube }}" class="uk-display-block">Youtube</a>{{ end }}
+                        {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-display-block">Yelp</a>{{ end }}
                     </div>
                 </div>
                 <div class="uk-width-1-4@s">
@@ -29,26 +29,19 @@
                 </div>
                 <div class="uk-width-1-4@s">
                     <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
-                        <p>Office is scheduled for weekends only</p>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Quick Links</h3>
                         <ul class="uk-list uk-white">
-                            <li><span class="uk-text-bold">Fri:</span> <span>Appointments only</span></li>
-                            <li><span class="uk-text-bold">Sat:</span> <span>Appointments only</span></li>
-                            <li><span class="uk-text-bold">Sun:</span> <span>Appointments only</span></li>
+                            <li><a href="/about">About Yoori Park</a></li>
+                            <li><a href="/listings">View all Listings</a></li>
+                            <li><a href="/press-and-media">Press and Media</a></li>
+                            <li><a href="/contact">Contact</a></li>
                         </ul>           
-                        <a href="{{ .Site.Data.profile.booking_link }}" class="accent"><span uk-icon="icon:arrow-right"></span> Book appointment</a>
                     </div>
                 </div>
                 <div class="uk-width-1-4@s">
                     <div>
-                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
-                        <p>Office is scheduled for weekends only</p>
-                        <ul class="uk-list uk-white">
-                            <li><span class="uk-text-bold">Fri:</span> <span>Appointments only</span></li>
-                            <li><span class="uk-text-bold">Sat:</span> <span>Appointments only</span></li>
-                            <li><span class="uk-text-bold">Sun:</span> <span>Appointments only</span></li>
-                        </ul>           
-                        <a href="{{ .Site.Data.profile.booking_link }}" class="accent"><span uk-icon="icon:arrow-right"></span> Book appointment</a>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Yoori Park</h3>
+                        <p class="uk-white">The client is #1 in Yoori’s book. Her desire is to assist clients wanting to buy or sell their home</p>
                     </div>
                 </div>
             </div>

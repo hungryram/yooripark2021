@@ -89,7 +89,7 @@ ul.uk-breadcrumb>*>:hover {
 }
 
 a.uk-accordion-title {
-font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -462,9 +462,13 @@ footer.footer {
     background-size: cover
 }
 
-footer.footer h6,
 footer.footer a {
     color: #fff;
+}
+
+footer.footer h3.uk-h5.uk-white.uk-text-uppercase {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 div.footer-credit p,

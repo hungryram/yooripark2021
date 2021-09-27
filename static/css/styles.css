@@ -509,6 +509,15 @@ div.line {
     display: flex;
 }
 
+.listing__detail__form form {
+    padding: 20px;
+}
+
+@media screen and (min-width:768px) {
+    .baseof__slider {
+        margin: 20px;
+    }
+}
 
 /* PROPERTY CARD */
 

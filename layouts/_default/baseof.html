@@ -2,7 +2,7 @@
 {{ partial "global/navbar" . }}
 
 {{ if .Params.photos.gallery }}
-<div style="margin: 0px 40px;" uk-slideshow>
+<div class="baseof__slider" uk-slideshow>
     <div class="uk-position-relative">
         <div class="uk-slider-container uk-light">
             <ul class="uk-slideshow-items" uk-height-viewport="min-height: 200" uk-lightbox="animation:fade">
@@ -13,12 +13,10 @@
                     </a>
                 </li>
                 {{ end }}
-            </ul>
-        </div>
 
-        <div class="uk-hidden@s uk-light">
-            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            </ul>
+            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
         </div>
     </div>
 </div>

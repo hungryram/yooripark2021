@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://yoori2021.netlify.app/"
 enableRobotsTXT = "true"
 languageCode = "en-us"
 summaryLength = 25

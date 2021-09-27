@@ -65,12 +65,12 @@ div.uk-container {
     padding-right: 20px;
 }
 
-.main__content a {
-    color: #c59d5f;
+.md__content a {
+    color: inherit;
     text-decoration: underline;
 }
 
-.main__content a:hover {
+.md__content a:hover {
     color: inherit;
 }
 
@@ -272,13 +272,13 @@ div.uk-navbar-dropdown ul li {
 }
 
 div.uk-navbar-dropdown ul li:hover {
-    background: #c59d5f;
+    background: #000;
     transition: .3s;
     color: #fff;
 }
 
 div.uk-navbar-dropdown ul li:hover a {
-    color: #000;
+    color: #fff;
     transition: .3s;
     padding-left: 5px;
 }
@@ -387,74 +387,6 @@ div.hero-text p {
     line-height: 1.8;
 }
 
-/* SERVICE PAGE */
-
-@media screen and (min-width: 768px) {
-    div.service__single h1 {
-        font-size: 4rem;
-    }
-}
-
-div.service__single p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-}
-
-div.service__single a:before {
-    content: '';
-    width: 5rem;
-    height: 3px;
-    background: #c59d5f;
-    transition: .3s;
-    margin-left: 20px;
-    right: 0;
-    left: 0;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 20px;
-}
-
-div.service__single a {
-    color: #c59d5f;
-    transition: .3s;
-    font-size: 1.5rem;
-}
-
-div.service__list h2:after {
-    content: '';
-    position: absolute;
-    width: 0px;
-    height: 3px;
-    background: #c59d5f;
-    top: 50%;
-    transition: .3s;
-    margin-left: 20px;
-}
-
-div.service__list h2:hover:after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background: #c59d5f;
-    top: 50%;
-    margin-left: 20px;
-    transition: .3s;
-}
-
-div.service__list a:hover {
-    text-decoration: none;
-}
-
-div.service__list a:hover h2 {
-    transition: .3s;
-    color: #c59d5f!important;
-}
-
-div.service__list h2 {
-    transition: .3s;
-}
-
 /* FOOTER */
 
 footer.footer {
@@ -476,10 +408,6 @@ div.footer-credit ul li a {
     font-size: 12px;
 }
 
-.contact-detail span.uk-icon-button {
-    background: #c59d5f;
-}
-
 .contact-detail svg {
     color: #fff;
 }
@@ -493,14 +421,6 @@ div.footer-credit ul li a {
     list-style: none;
 }
 
-footer.footer svg {
-    transition: .3s;
-}
-
-footer.footer svg:hover {
-    color: #c59d5f;
-    transition: .3s;
-}
 
 /* SEARCH */
 

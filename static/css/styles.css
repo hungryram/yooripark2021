@@ -348,13 +348,6 @@ div.hero-text p {
 
 /* INTRO */
 
-@media screen and (min-width: 768px) {
-    div.uk-section.intro__first > div > div > div > div:nth-child(2) > h2 {
-        position: relative;
-        left: -200px;
-        font-size: 3rem;
-    }
-}
 
 @media screen and (max-width: 768px) {
     img.image1,

@@ -1,25 +1,38 @@
-baseURL = "https://complete-muscle-therapy.netlify.app"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+baseURL = ""
 enableRobotsTXT = "true"
 languageCode = "en-us"
 summaryLength = 25
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-[[menu.main]]
-name = "Services"
-url = "/services"
-weight = 5
-[[menu.main]]
+[[menu.footer]]
 name = "Home"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "Testimonials"
-url = "/testimonials"
+name = "Sold Properties"
+parent = "Properties"
+url = "/status/sold/"
+weight = 2
+[[menu.main]]
+name = "Exclusive Properties"
+parent = "Properties"
+url = "/featured/featured/"
+weight = 1
+[[menu.main]]
+name = "Services"
 weight = 4
 [[menu.main]]
-name = "Blog"
-url = "/blog"
+name = "Properties"
 weight = 3
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+[taxonomies]
+category = "categories"
+city = "cities"
+featured = "featured"
+properties = "properties"
+states = "states"
+status = "status"
+tag = "tags"

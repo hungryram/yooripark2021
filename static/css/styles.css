@@ -31,11 +31,15 @@ body .uk-heading-xlarge {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    color: #fff;
-    line-height: 29px;
-    font-weight: 300;
-    background: #000;
+    font-family: 'Cormorant', serif;
+    color: #000;
+    line-height: 35px;
+    font-weight: 500;
+    background: #f9f7f7;
+}
+
+.title-font {
+    font-family: 'Cormorant', serif!important;
 }
 
 body em {
@@ -43,12 +47,16 @@ body em {
 }
 
 html body {
-    font-size: 17px;
+    font-size: 18px;
+}
+
+li div.uk-overlay-primary {
+    background: rgb(17 17 17 / 25%);
 }
 
 @media (min-width: 1200px) {
-    div.uk-grid-column-large>*, div.uk-grid-large>* {
-        padding-left: 165px;
+    div.uk-grid-column-xlarge>*, div.uk-grid-xlarge>* {
+        padding-left: 130px;
     }
 }
 
@@ -81,7 +89,7 @@ ul.uk-breadcrumb>*>:hover {
 }
 
 a.uk-accordion-title {
-    font-family: 'Cormorant', serif;
+font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -95,14 +103,21 @@ form label {
 form .uk-input, form .uk-select, form .uk-textarea {
     background: transparent;
     color: #fff;
-    border: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid #000;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
     padding: 25px;
 }
 
 form .uk-input::placeholder, 
 form .uk-select::placeholder, 
 form .uk-textarea::placeholder {
-    color: #fff;
+    color: #000;
+}
+
+div.uk-overlay-primary {
+    background: rgba(17,17,17,.4);
 }
 
 h1.h1-title {
@@ -111,10 +126,8 @@ h1.h1-title {
 
 a.uk-button-secondary {
     background: transparent;
-    color: #fff;
-    border: 1px solid #fff;
+    color: #272424;
     transition: .3s ease;
-    padding: 2px 60px;
 }
 
 a.uk-button-secondary:hover {
@@ -144,7 +157,7 @@ a.uk-button-secondary:hover {
 
 button.uk-button-primary,
 a.uk-button-primary {
-    background: #c59d5f;
+    background: #000;
     padding: 5px 40px;
     color: #FFF;
     display: inline-block;
@@ -154,6 +167,12 @@ a.uk-button-primary {
     transition: ease-out 0.6s;
     outline: none;
     border: none;
+}
+
+span.line {
+    width: 20px;
+    height: 2px;
+    background: red;
 }
 
 body .uk-button-primary.uk-active, body .uk-button-primary:active,
@@ -201,15 +220,39 @@ div.page__banner__inner {
 
 /* NAVBAR */
 
-@media screen and (max-width: 768px) {
-    div.top-navbar {
-        display: none;
-    }
+/* WHITE/BLACK LOGO */
+
+/* .uk-navbar-sticky .white-logo {
+    display: none;
 }
 
-nav.uk-navbar-container:not(.uk-navbar-transparent) {
-    background: #000000;
+.uk-navbar-sticky .dark-logo {
+    display: block;
 }
+
+.dark-logo {
+    display: none;
+}
+
+div.full-nav-wrapper:hover .dark-logo {
+    display: block;
+}
+
+div.full-nav-wrapper:hover .white-logo {
+    display: none;
+} */
+
+ul.uk-navbar-item, ul.uk-navbar-nav>li>a, ul.uk-navbar-toggle,
+ul.uk-navbar-dropdown-nav>li.uk-active>a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: rgb(65, 65, 65);
+    }
+
+.uk-navbar-sticky ul.uk-navbar-nav>li>a:not(.top-navbar a) {
+    color: #000;
+}
+
 
 div.top-navbar .uk-navbar-nav>li>a {
     min-height: 40px;
@@ -235,7 +278,7 @@ div.uk-navbar-dropdown ul li:hover {
 }
 
 div.uk-navbar-dropdown ul li:hover a {
-    color: #fff;
+    color: #000;
     transition: .3s;
     padding-left: 5px;
 }
@@ -248,19 +291,17 @@ div.uk-navbar-dropdown ul li {
     margin-top: 0!important;
 }
 
-/* body svg {
-    color: #C3002F;
-} */
-
-ul.uk-navbar-nav>li>a:not(.top-navbar a) {
-    color: #ffffff;
-    font-family: 'Lato', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+.uk-visible\@s.uk-sticky.undefined.uk-sticky-fixed {
+    padding: 15px;
+    transition: .3s ease-in;
 }
+
+.uk-visible\@s.uk-sticky.uk-sticky-fixed.undefined.uk-navbar-sticky.uk-dark.uk-sticky-below {
+    padding: 0px;
+    transition: .3s ease-in;
+}
+
+
 
 ul.uk-nav-parent-icon>.uk-parent>a::after {
     transform: rotate(
@@ -272,12 +313,18 @@ ul.uk-nav-parent-icon>.uk-parent>a::after {
 .mobile__wrapper ul li a {
     font-size: 1.5rem;
     margin: 10px 0;
-    color: #eee;
+    color: #000;
     transition: .3s;
 }
 
+.mobile__wrapper ul.uk-nav-default .uk-nav-sub a {
+    color: #000;
+}
+
 div.uk-modal-dialog {
-    background: #000;
+    background: rgb(254 254 254 / 95%);
+    background-blend-mode: overlay;
+    background-size:cover;
 }
 
 /* HERO */
@@ -288,6 +335,10 @@ div.uk-overlay-hero {
 
 div.hero-text p {
     font-size: 17.5px;
+}
+
+#body > main > div.uk-cover-container.uk-flex.uk-flex-middle.uk-flex-center > div.uk-width-2xlarge.uk-text-center.hero-container > div > h1 {
+    font-family: 'Cormorant', serif!important;
 }
 
 @media screen and (max-width: 800px) {
@@ -312,6 +363,14 @@ div.hero-text p {
 }
 
 /* INTRO */
+
+@media screen and (min-width: 768px) {
+    div.uk-section.intro__first > div > div > div > div:nth-child(2) > h2 {
+        position: relative;
+        left: -200px;
+        font-size: 4rem;
+    }
+}
 
 @media screen and (max-width: 768px) {
     img.image1,
@@ -399,7 +458,7 @@ div.service__list h2 {
 /* FOOTER */
 
 footer.footer {
-    background: url("https://res.cloudinary.com/hungryram19/image/upload/v1632243606/corinne-renteria/complete-muscle-therapy/dark-marble.jpg") no-repeat;
+    background: #000;
     background-size: cover
 }
 
@@ -437,4 +496,125 @@ footer.footer svg {
 footer.footer svg:hover {
     color: #c59d5f;
     transition: .3s;
+}
+
+/* SEARCH */
+
+#top-search {
+    padding: 20px;
+}
+
+@media screen and (max-width:768px) {
+    div.desktop-view {
+        display: none;
+    }
+
+    .reset-filter {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width:768px) {
+    div.mobile-view {
+        display: none;
+    }
+
+    #top-search .uk-active{
+        color: #000;
+    } 
+
+}
+
+div.uk-dropdown {
+    padding: 10px;
+}
+
+div.uk-dropdown ul li {
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+
+
+span.search-filter {
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 2px;
+    background: black;
+}
+
+span.search-filter:empty {
+    visibility: hidden;
+}
+
+.featured-filter {
+    background: #f0b327;
+    color: white;
+}
+
+/* PROPERTY DETAIL PAGE */
+
+div.line {
+    background: rgb(0 0 0 / 41%);
+    width: 1px;
+    height: 70px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -159px;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+    border-bottom: 1px solid rgb(194 194 194 / 48%);
+    padding: 10px 0;
+}
+
+.row-flex {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+/* PROPERTY CARD */
+
+span.featured.uk-badge {
+    background: #f1b425;
+}
+
+span.status.uk-badge,
+span.featured.uk-badge {
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 2px;
+}
+
+.property-card-overlay {
+    background: rgba(0 0 0 / 20%);
+}
+
+.property-card .property-card-details {
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+}
+
+span.price-badge {
+    background: 0 0;
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.property-card .property-card-address {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
 }

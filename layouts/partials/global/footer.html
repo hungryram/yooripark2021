@@ -1,16 +1,14 @@
 {{ $footerSocial := .Site.Data.profile.social_media }}
 {{ $contact := .Site.Data.profile.contact_information }}
-{{ if in .Permalink "/contact" }}
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d828.7836101931802!2d-117.83906227075954!3d33.80884351311414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd74e18a423d7%3A0x7bfde7396f948890!2s1500%20E%20Katella%20Ave%2C%20Orange%2C%20CA%2092867!5e0!3m2!1sen!2sus!4v1632335692208!5m2!1sen!2sus" height="450" style="filter: invert(90%);border:0;width:100%;" allowfullscreen="" loading="lazy"></iframe>
-{{ end }}
 <footer class="footer">
     <div class="uk-section">
         <div class="uk-container uk-container-large">
+            <div class="uk-margin">
+            </div>
             <div class="uk-grid-match uk-grid-large uk-text-left" uk-grid>
-                <div class="footer-text uk-width-1-3@s">
-                    <h3 class="uk-h3 uk-white uk-text-uppercase">About</h3>
-                    <p class="uk-white">{{ .Site.Data.appearance.footer.footer_bio }}</p>
+                <div class="footer-text uk-width-1-4@s">
                     <div class="accent">
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Follow me</h3>
                         {{ if $footerSocial.facebook }}<a href="{{ $footerSocial.facebook }}" class="uk-margin-small-right" uk-icon="icon: facebook; ratio: 1"></a>{{ end }}
                         {{ if $footerSocial.instagram }}<a href="{{ $footerSocial.instagram }}" class="uk-margin-small-right" uk-icon="icon: instagram; ratio: 1"></a>{{ end }}
                         {{ if $footerSocial.linkedin }}<a href="{{ $footerSocial.linkedin }}" class="uk-margin-small-right" uk-icon="icon: linkedin; ratio: 1"></a>{{ end }}
@@ -20,19 +18,30 @@
                         {{ if $footerSocial.yelp }}<a href="{{ $footerSocial.yelp }}" class="uk-margin-small-right" uk-icon="icon: yelp; ratio: 1"></a>{{ end }}
                     </div>
                 </div>
-                <div class="uk-width-1-3@s">
+                <div class="uk-width-1-4@s">
                     <div>
-                        <h3 class="uk-h3 uk-white uk-text-uppercase">Contact Information</h3>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Contact Information</h3>
                         <ul class="uk-list">
                             <li><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></li>
-                            <li><a href="tel:{{ $contact.cell }}"><strong>Direct: </strong>{{ $contact.cell }}</a></li>
-                            <li><a href="https://www.google.com/maps/place/{{ $contact.address }} {{ $contact.city }} {{ $contact.state }} {{ $contact.zip_code }}" target="_blank">{{ $contact.address }}, {{ $contact.city }}, {{ $contact.state }} {{ $contact.zip_code }}</a></li>
+                            <li><a href="tel:{{ $contact.cell }}"><strong>Cell: </strong>{{ $contact.cell }}</a></li>
                         </ul>           
                     </div>
                 </div>
-                <div class="uk-width-1-3@s">
+                <div class="uk-width-1-4@s">
                     <div>
-                        <h3 class="uk-h3 uk-white uk-text-uppercase">Office Hours</h3>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
+                        <p>Office is scheduled for weekends only</p>
+                        <ul class="uk-list uk-white">
+                            <li><span class="uk-text-bold">Fri:</span> <span>Appointments only</span></li>
+                            <li><span class="uk-text-bold">Sat:</span> <span>Appointments only</span></li>
+                            <li><span class="uk-text-bold">Sun:</span> <span>Appointments only</span></li>
+                        </ul>           
+                        <a href="{{ .Site.Data.profile.booking_link }}" class="accent"><span uk-icon="icon:arrow-right"></span> Book appointment</a>
+                    </div>
+                </div>
+                <div class="uk-width-1-4@s">
+                    <div>
+                        <h3 class="uk-h5 uk-white uk-text-uppercase">Office Hours</h3>
                         <p>Office is scheduled for weekends only</p>
                         <ul class="uk-list uk-white">
                             <li><span class="uk-text-bold">Fri:</span> <span>Appointments only</span></li>
@@ -43,9 +52,17 @@
                     </div>
                 </div>
             </div>
+            <div class="uk-margin-medium" style="border-top: 1px solid rgb(255 255 255 / 15%)"></div>
+            <div class="disclaimer uk-text-center">
+                <img src="https://res.cloudinary.com/hungryram19/image/upload/v1608162411/yoori-park/yooripark/revelbg2_iom7bo.jpg" alt="Revel Real Estate logo" width="200">
+
+                <p class="uk-white">{{ .Site.Data.appearance.footer.disclaimer }}</p>
+            </div>
         </div>
     </div>
-    <div class="uk-container uk-padding footer-credit">
+    <div style="border-top: 1px solid rgb(255 255 255 /15%)"></div>
+
+    <div class="uk-container uk-padding-small footer-credit">
         <div class="uk-grid">
             <div class="uk-width-1-2@m">
                 <ul class="uk-padding-remove">

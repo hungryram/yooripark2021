@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="uk-section">
+    <div class="uk-container uk-container-xlarge" uk-scrollspy="cls: uk-animation-slide-bottom-small; target: .uk-card;">
+        <div uk-filter="target: .js-filter;animation: {{ .Site.Data.appearance.search_field.filter_animation }}">
+            <ul class="js-filter uk-child-width-1-2@s uk-child-width-1-3@m uk-text-center" uk-grid>
+
+                        {{ range .Pages }}
+                        <li class="listing-result"
+                            data-city="{{ .Params.cities }}"
+                            data-states="{{ .Params.states }}"
+                            data-properties="{{ .Params.properties }}"
+                            data-price="{{ .Params.price }}"
+                            data-featured="{{ .Params.featured }}">
+                            <a href="{{ .Permalink }}">
+                                    {{ partial "templates/property-card" . }}
+                                </a>         
+                            </li>
+                        {{ end }}
+
+            </ul>
+        
+        </div>
+    </div>
+</div>
+{{ end }}

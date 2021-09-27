@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="uk-section uk-section-large">
+    <div class="uk-container uk-container-small">
+        {{ range .Params.press }}
+        <div class="uk-cover-container">
+            <img src="{{ .image }}" alt="{{ .heading }}" uk-cover>
+            <canvas height="400"></canvas>
+            <div class="uk-overlay-primary uk-position-cover"></div>
+            <div class="uk-overlay uk-position-center uk-light uk-text-center">
+                <h2>{{ .heading }}</h2>
+                <p class="uk-white">{{ .body }}</p>
+                <a href="{{ .link }}" class="uk-button uk-button-secondary">Watch</a>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,132 @@
+{{ define "main" }}
+<div class="line"></div>
+<div class="uk-section">
+    <div class="uk-container uk-container-large">
+        <div class="uk-card uk-card-body uk-text-center uk-margin-large-bottom">
+            <h2 class="uk-h1">Location</h2>
+            <h1 class="uk-h3">{{ .Title }}, {{ .Params.cities }}, {{ .Params.states }} {{ index .Params "zip-codes" }}</h1>
+        </div>
+        <div class="uk-grid uk-grid-column-large">
+            <div class="uk-width-1-2@s">
+                <div uk-slideshow>
+                    <div class="uk-position-relative">
+                        <div class="uk-slider-container uk-light">
+                            <ul class="uk-slideshow-items" uk-lightbox="animation:fade">
+                                {{ range .Params.photos.gallery }}
+                                <li>
+                                    <img src="{{ . }}" alt="" uk-cover>
+                                </li>
+                                {{ end }}
+                            </ul>
+                            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="uk-width-1-2@s">
+                <div class="single-details-list">
+                    <h2 class="uk-h1">{{ .Params.short_title }}</h2>
+                    <div class="uk-text-center" uk-grid>
+                        <div class="uk-width-1-2">
+                            <div class="uk-card">
+                                {{ with .Params.details.bedrooms }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Bedrooms</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.bathrooms }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Bedrooms</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.garage }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Bedrooms</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.square_footage }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Square Ft.</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2">
+                            <div class="uk-card">
+                                {{ with .Params.details.year_built }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Year Built</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.hoa }}
+                                <div class="row-flex justify-content-between">
+                                    <span>HOA</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.property }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Property</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.details.mls_number }}
+                                <div class="row-flex justify-content-between">
+                                    <span>MLS Number</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.status }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Status</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                                {{ with .Params.price }}
+                                <div class="row-flex justify-content-between">
+                                    <span>Price</span>
+                                    <span>{{ . }}</span>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                        <div class="uk-margin-large-top">
+                            <a href="mailto:{{ .Site.Data.profile.contact_information.email }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Email</a>
+                            <a href="tel:{{ .Site.Data.profile.contact_information.cell }}" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Call</a>
+
+                            <div class="uk-inline">
+                                <a href="/about" class="uk-link-text uk-text-bold"><svg width="50" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="arrow-right"><line fill="none" stroke="#000" x1="4" y1="9.5" x2="80" y2="9.5"></line></svg> Share</a>
+                                <div uk-drop="mode: click">
+                                    <div class="uk-card uk-card-body uk-card-default">
+                                        {{ partial "templates/share" . }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="prop__description uk-margin-large-top">
+            <h2>Description</h2>
+            {{ .Content }}
+            {{ if .Params.revel_re }}
+            <img src="https://res.cloudinary.com/hungryram19/image/upload/v1608162411/yoori-park/yooripark/revelbg2_iom7bo.jpg" alt="Revel Real Estate logo" width="300">
+            {{ end }}
+        </div>
+        <div class="listing__detail__form uk-margin-large-top uk-card-default" style="background:#fff;">
+            {{ partial "templates/form" . }}
+        </div>
+    </div>
+</div>
+{{ end }}
+

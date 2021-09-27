@@ -1,0 +1,12 @@
+<div id="share-buttons"> 
+    <h3 class="uk-text-bold uk-h4">Share this listing</h3>
+
+    <!-- Email -->
+    <a href="mailto:?Subject=Check%20Out%20This%20Blog&amp;Body=Check%20out%20this%20blog%20from%20{{ .Permalink | absURL }}" class="uk-icon-button uk-margin-small-right" uk-icon="icon: mail"></a>    
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{ .Permalink | absURL }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: facebook"></a>     
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ .Permalink | absURL }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: linkedin"></a>       
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url={{ .Permalink | absURL }}&amp;text=Check%20out%20this%20blog%20from%20{{ .Site.Data.profile.logo_and_title.website_title }}" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
+</div> <!-- end share buttons -->

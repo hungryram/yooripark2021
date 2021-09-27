@@ -1,38 +1,18 @@
 +++
-Title = "About"
-about_subtitle = "My About Subtitle"
-about_title = "About Complete Muscle Therapy"
 meta_description = ""
-meta_title = ""
-[about_footer]
-about_button_label = "Book Now"
-about_button_link = "/bookings"
-about_footer_body = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendist, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
-about_footer_subtitle = "Let's Connect"
-about_footer_title = "Schedule an Appointment"
-[columns.column_four]
-body_text_four = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendist, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
-column_four_title = "testing rou"
-[columns.column_one]
-body_text_one = "ectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendisLorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
-column_one_title = "test column"
-[columns.column_three]
-body_text_three = "t, consecteturt, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reit, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
-column_three_title = "t, consectetur adipisicing elit. "
-[columns.column_two]
-body_text_two = "t, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis, consectetur adipisicing elit. Magnam, officiis! Quas, laborum numquam. Ipsa, amet maiores vero reiciendis"
-column_two_title = "lorem test"
+title = "About Yoori"
+title_tag = ""
+[menu.main]
+name = "About"
+weight = 2
 
 +++
-**Hi I’m Corinne!**
+Yoori graduated from the University of Washington with a Bachelor’s in Communications. With over 18 years of training and experience in both sales and customer service, she is not only results-oriented but also deeply values building rapport with each and every one of her clients.
 
-I aim to create a safe environment while tailoring you’re session to your specific needs. I am a Neuromuscular Massage Therapist which means I re-educate your muscles to it’s natural resting point. It’s what I like to call the “Real Work” not the “Fake/Fluffy Work”.  
-I also offer other modalities such as Swedish, Deep Tissue, Trigger Point, Myofascial Techniques, Sports Massage, etc.
+Throughout her career, she has been consistently recognized for various awards. At a national bank, she quickly became the top teller in the district and second in the region. Her clients appreciated her no-nonsense approach as she tailored her recommendations unique to the individual and/or entity. Many years and career fields later, Yoori tried the luxury auto industry and once again was among the top three salespersons just within the first year and continued to remain among the top five. Her top scores, ratings, and reviews can all attest to her success, which she attributes to her own expertise and genuine care.
 
-​
+It is when she entered the real estate world that she realized her dream: to share her passion of architecture and design with others whilst creating, nurturing, and contributing to a greater community. As a child, she watched her family’s construction company build Hotel Nikko, a luxury hotel in Guam, among other major projects that piqued her interest even at a young age. Observing the family business has developed in her an acute sense for providing professional input from early on. Today, Yoori is confident in her functional and aesthetic assessment of homes and finding the perfect owner or family for them. She finds the greatest fulfillment when witnessing the joy of having made a significant step in one’s life, the sense of accomplishment, and the hopes of making the richest memories.
 
-Here is a little more about me...
-
-​
-
-I am a graduate from the 900 hour program at National Holistic Institute. I am educated in both Western and Eastern modalities. During my education at National Holistic Institute, I was required to work in the teaching clinic which gave me the experience of working on the public as well as reception desk responsibilities which included customer service, cashier, record keeping, appointment scheduling, and problem solving. Some of my experience was developed during my externship at Hand and Stone Spa and Facial. At Hand and Stone, I would perform massages and complete the responsibilities of a massage therapist which included laundry and turning rooms. While I was still in training, I volunteered as a Massage Therapist to do the 2017 Disneyland Half Marathon Race in Anaheim. Volunteering at this event gave me the experience of performing Sports Massage on participating athletes. After graduating from the 900 hour program at NHI, I knew there had to be more to learn in order to relieve the body from pain. That is when I decided to take the 450 hour Advanced Neuromuscular Massage Therapy Program at NHI. During This program I studied what I like to call the "Real Work" rather than the "Fluffy Work". Currently, I am a Professional Dancer, Dance Teacher, and Choreographer. I am also studying for my Personal Training certificate while helping  relieve my client's pain through Massage Therapy. Because of my training at National Holistic Institute, I am proud to be a Professional Massage Therapist and Health Educator. I believe that the body needs assistance in healing whether it’s through body rehabilitation or simple relaxation. I look forward to working with you and can’t wait to help you with wellness journey!
+Whether a first purchase, selling your home, a subsequent one, or an investment, it is her great privilege to help in guiding and navigating the complex and oft emotional journey with 100% honesty, integrity, and due diligence guaranteed.  
+–  
+Few fun/random facts about Yoori: Born and raised in Guam until 8 years old. Has done charitable work in both India and Kenya. In her spare time, can be found volunteering for organizations involving children, women, and animals. Stays physically active via boxing and yoga. As a classically trained pianist, loves to connect with the keys as well as sing. Once trained by a renowned vocal coach and has performed for a variety of events.

@@ -1,6 +1,3 @@
-{{ $buttonColor := .Site.Data.appearance.colors }}
-{{ $searchFilter :=  .Site.Data.appearance.search_field }}
-{{ if not $searchFilter.disable_search }}
 <div id="top-search">
 <div class="uk-inline">
     <form action="{{ "search" | absURL }}">
@@ -19,22 +16,6 @@
         <div class="uk-inline">
             <a class="uk-button uk-button-default reset-filter uk-dark" uk-filter-control onClick="reset();">Reset</a>
         </div>
-        {{ if $searchFilter.search_by_state }}
-        <div class="uk-inline">
-            <button class="uk-button uk-button-default" type="button">States</button>
-            <div uk-dropdown="mode: click">
-                <ul class="uk-list">
-                    {{ $states := slice }}
-                    {{ range .Pages }}
-                      {{ $states = $states | append .Params.states }}
-                    {{ end }}
-                    {{ range ($states | uniq) }}
-                    <li uk-filter-control="filter: [data-states='{{ . }}']; group: data-states" onclick="document.getElementById('search-states').innerHTML='{{ . }}'; showSelected();getLength();">{{ . }}</li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
-        {{ end }}
     
         <div class="uk-inline">
             <button class="uk-button uk-button-default max-button" type="button">Cities</button>
@@ -84,26 +65,6 @@
         <a class="uk-button uk-button-default reset-filter uk-dark max-button" href="/listings" style="background:#fff">All Listings</a>
     </div>
 
-
-{{ if $searchFilter.search_by_state }}
-<div class="uk-width-1-2@s">
-    <div class="uk-inline uk-width-1-1">
-        <button class="uk-button uk-button-default max-button" type="button">States</button>
-        <div uk-dropdown="mode: click">
-            <ul class="uk-list">
-                {{ $states := slice }}
-                {{ range .Pages }}
-                  {{ $states = $states | append .Params.states }}
-                {{ end }}
-                {{ range ($states | uniq) }}
-                <li uk-filter-control="filter: [data-states='{{ . }}']; group: data-states" onclick="document.getElementById('search-states').innerHTML='{{ . }}'; showSelected();">{{ . }}</li>
-                {{ end }}
-            </ul>
-        </div>
-    </div>
-</div>
-{{ end }}
-{{ if $searchFilter.search_by_cities }}
 <div class="uk-width-1-2@s">
     <div class="uk-inline uk-width-1-1">
         <button class="uk-button uk-button-default max-button" type="button">Cities</button>
@@ -121,8 +82,6 @@
         </div>
     </div>
 </div>
-{{ end }}
-{{ if $searchFilter.search_by_properties }}
 <div class="uk-width-1-2@s">
     <div class="uk-inline uk-width-1-1">
         <button class="uk-button uk-button-default max-button" type="button">Properties</button>
@@ -139,7 +98,6 @@
         </div>
     </div>
 </div>
-{{ end }}
 
 <div class="uk-width-1-2@s">
     <div class="uk-inline uk-width-1-1">
@@ -159,7 +117,6 @@
 
 </div>
 </div>
-{{ end }}
 <div class="uk-margin" id="filter-badge">
     
 <span class="search-filter" id="search-properties"></span>

@@ -17,7 +17,7 @@ body .uk-heading-large,
 body .uk-heading-medium, 
 body .uk-heading-small, 
 body .uk-heading-xlarge {
-    font-family: 'Cormorant', serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.2;
 }
 
@@ -31,15 +31,15 @@ body .uk-heading-xlarge {
 }
 
 body {
-    font-family: 'Cormorant', serif;
+    font-family: 'Lato', sans-serif;
     color: #000;
     line-height: 35px;
-    font-weight: 500;
+    font-weight: 300;
     background: #f9f7f7;
 }
 
 .title-font {
-    font-family: 'Cormorant', serif!important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body em {
@@ -47,7 +47,7 @@ body em {
 }
 
 html body {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 li div.uk-overlay-primary {
@@ -220,33 +220,13 @@ div.page__banner__inner {
 
 /* NAVBAR */
 
-/* WHITE/BLACK LOGO */
-
-/* .uk-navbar-sticky .white-logo {
-    display: none;
-}
-
-.uk-navbar-sticky .dark-logo {
-    display: block;
-}
-
-.dark-logo {
-    display: none;
-}
-
-div.full-nav-wrapper:hover .dark-logo {
-    display: block;
-}
-
-div.full-nav-wrapper:hover .white-logo {
-    display: none;
-} */
 
 ul.uk-navbar-item, ul.uk-navbar-nav>li>a, ul.uk-navbar-toggle,
 ul.uk-navbar-dropdown-nav>li.uk-active>a {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
-    color: rgb(65, 65, 65);
+    font-weight: 400;
+    color: rgb(0, 0, 0);
     }
 
 .uk-navbar-sticky ul.uk-navbar-nav>li>a:not(.top-navbar a) {
@@ -338,7 +318,7 @@ div.hero-text p {
 }
 
 #body > main > div.uk-cover-container.uk-flex.uk-flex-middle.uk-flex-center > div.uk-width-2xlarge.uk-text-center.hero-container > div > h1 {
-    font-family: 'Cormorant', serif!important;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 800px) {
@@ -372,7 +352,7 @@ div.hero-text p {
     div.uk-section.intro__first > div > div > div > div:nth-child(2) > h2 {
         position: relative;
         left: -200px;
-        font-size: 4rem;
+        font-size: 3rem;
     }
 }
 

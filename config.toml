@@ -30,7 +30,7 @@ weight = 1
 home = ["HTML", "RSS", "JSON"]
 [taxonomies]
 category = "categories"
-city = "cities"
+cities = "cities"
 featured = "featured"
 properties = "properties"
 states = "states"

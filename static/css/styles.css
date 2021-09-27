@@ -353,6 +353,10 @@ div.hero-text p {
     div.hero-text p.uk-text-normal {
         font-size: 15px;
     }
+
+    #body > main > div.uk-cover-container.uk-flex.uk-flex-middle.uk-flex-center > div.uk-position-bottom > div > div > h2 {
+        font-size: 19px;
+    }
 }
 
 @media screen and (min-width:800px) {
